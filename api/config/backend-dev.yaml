@@ -1,0 +1,17 @@
+FASTAPI:
+  WORKERS: 4
+  DEBUG: True
+  RELOAD: True
+  HOST: '0.0.0.0'
+  PORT: 4559
+
+CREDENTIALS: "credentials.yml"
+
+METADATA: {"categories", "scientific_domains", "target_users"}
+
+SBERT:
+  MODEL: 'paraphrase-MiniLM-L6-v2'
+  DEVICE: "cpu"
+
+EMBEDDINGS_STORAGE_PATH: "./storage/embeddings/"
+SIMILARITIES_STORAGE_PATH: "./storage/similarities/"

@@ -1,0 +1,40 @@
+version: "3.5"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      PGDATA: /data/postgres
+    volumes:
+      - type: volume
+        source: EOSCF_RECOMMENDATION_SYSTEM_POSTGRES_DATA
+        target: /data/postgres
+      - type: bind
+        source: ./storage/dumps/marketplace/mp_db_dump_ano.sql
+        target: /dump/mp_db_dump_ano.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: recommendation-system-app
+    ports:
+      - "0.0.0.0:4557:4557"
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    depends_on:
+      - postgres
+
+networks:
+  EOSC_RECOMMENDATION_SYSTEM_APP:
+    name: EOSC_RECOMMENDATION_SYSTEM_APP
+
+volumes:
+  EOSCF_RECOMMENDATION_SYSTEM_POSTGRES_DATA:
+    name: EOSCF_RECOMMENDATION_SYSTEM_POSTGRES_DATA

@@ -1,7 +1,7 @@
 # Recommendation System for EOSCF
 
 The recommendation system component focuses on creating recommendations for a requested resource. So far, its data
-source is the Marketplace (MP) and it implements the use case 1 (https://wiki.eoscfuture.eu/display/EOSCF/RS+Content-based+Use+Cases)
+source is the Marketplace (MP) and it implements the use case 1.5 (https://wiki.eoscfuture.eu/display/EOSCF/RS+Content-based+Use+Cases)
 
 ## Initial set up
 

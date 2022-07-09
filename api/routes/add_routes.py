@@ -1,5 +1,5 @@
-from api.routes import recommendation
+from api.routes import recommendations
 
 
 def initialize_routes(app):
-    app.include_router(recommendation.router)
+    app.include_router(recommendations.router)

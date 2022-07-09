@@ -7,11 +7,16 @@ FASTAPI:
 
 CREDENTIALS: "credentials.yml"
 
-METADATA: {"categories", "scientific_domains", "target_users"}
+SIMILAR_SERVICES:
+  METADATA: {"categories", "scientific_domains", "target_users"}
 
-SBERT:
-  MODEL: 'paraphrase-MiniLM-L6-v2'
-  DEVICE: "cpu"
+  SBERT:
+    MODEL: 'paraphrase-MiniLM-L6-v2'
+    DEVICE: "cpu"
 
-EMBEDDINGS_STORAGE_PATH: "./storage/embeddings/"
-SIMILARITIES_STORAGE_PATH: "./storage/similarities/"
+  BINARIZERS_STORAGE_PATH: "api/recommender/similar_services/storage/binarizers"
+  EMBEDDINGS_STORAGE_PATH: "api/recommender/similar_services/storage/embeddings/"
+  SIMILARITIES_STORAGE_PATH: "api/recommender/similar_services/storage/similarities/"
+
+PROJECT_COMPLETION:
+  ASSOCIATION_RULES_PATH: "api/recommender/project_completion/storage/association_rules.parquet"

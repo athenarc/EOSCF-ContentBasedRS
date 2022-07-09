@@ -1,10 +1,12 @@
 import logging
+import os
 from os import path
 
 import pandas as pd
-from api.database import PostgresDb
-from api.recommender.embeddings.text_embeddings import create_text_embeddings
-from api.recommender.utlis import get_services
+from api.databases.mongo import RSMongoDB
+from api.recommender.similar_services.embeddings.text_embeddings import \
+    create_text_embeddings
+from api.recommender.similar_services.utlis import get_services
 from api.settings import APP_SETTINGS
 from pandas import read_parquet
 from sklearn.metrics.pairwise import cosine_similarity
@@ -28,10 +30,8 @@ class TextStructure:
         logger.info("Initializing text structures...")
 
         # Get all services
-        db = PostgresDb(APP_SETTINGS["CREDENTIALS"]["POSTGRES"])
-        db.connect()
+        db = RSMongoDB()
         resources = get_services(db)
-        db.close_connection()
 
         # Create embeddings
         embeddings = create_text_embeddings(resources)
@@ -45,11 +45,17 @@ class TextStructure:
         # Store similarities
         similarities.to_parquet(similarities_path)
 
-    # getters
+    def update(self, embeddings_path, similarities_path):
 
-    # update
+        # delete structures
+        os.remove(embeddings_path)
+        os.remove(similarities_path)
+
+        self.initialize_structures(embeddings_path, similarities_path)
+        self.embeddings = read_parquet(embeddings_path)
+        self.similarities = read_parquet(similarities_path)
 
 
 # global variable
-TEXT_STRUCTURES = TextStructure(APP_SETTINGS["EMBEDDINGS_STORAGE_PATH"] + "text_embeddings.parquet",
-                                APP_SETTINGS["SIMILARITIES_STORAGE_PATH"] + "text_similarities.parquet")
+TEXT_STRUCTURES = TextStructure(APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["EMBEDDINGS_STORAGE_PATH"] + "text_embeddings.parquet",
+                                APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SIMILARITIES_STORAGE_PATH"] + "text_similarities.parquet")

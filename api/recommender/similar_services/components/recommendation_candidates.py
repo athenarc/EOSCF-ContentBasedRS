@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import logging
 
-from api.recommender.initialization.metadata_structure import METADATA_STRUCTURES
-from api.recommender.initialization.text_structure import TEXT_STRUCTURES
+from api.recommender.similar_services.initialization.metadata_structure import METADATA_STRUCTURES
+from api.recommender.similar_services.initialization.text_structure import TEXT_STRUCTURES
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +34,7 @@ def get_recommendation_candidates(view_resource, purchased_resources, view_weigh
         weights.loc[purchased_resources] = (1-view_weight)*(1/len(purchased_resources))
 
     # Calculate the metadata and text similarity of each resource
-    metadata_similarity= pd.Series(np.average(METADATA_STRUCTURES.similarities, weights=weights, axis=1), index=indexing)
+    metadata_similarity = pd.Series(np.average(METADATA_STRUCTURES.similarities, weights=weights, axis=1), index=indexing)
     text_similarity = pd.Series(np.average(TEXT_STRUCTURES.similarities, weights=weights, axis=1), index=indexing)
 
     # Calculate the weighted average of the similarities

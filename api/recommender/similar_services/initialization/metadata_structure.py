@@ -1,14 +1,15 @@
-from pandas import read_parquet
-from os import path
-import pandas as pd
 import logging
-from sklearn.metrics.pairwise import cosine_similarity
+import os
+from os import path
 
-from api.recommender.utlis import get_services
+import pandas as pd
+from api.databases.mongo import RSMongoDB
+from api.recommender.similar_services.embeddings.metadata_embeddings import \
+    create_metadata_embeddings
+from api.recommender.similar_services.utlis import get_services
 from api.settings import APP_SETTINGS
-from api.database import PostgresDb
-
-from api.recommender.embeddings.metadata_embeddings import create_metadata_embeddings
+from pandas import read_parquet
+from sklearn.metrics.pairwise import cosine_similarity
 
 logger = logging.getLogger(__name__)
 
@@ -28,14 +29,11 @@ class MetadataStructure:
         logger.info("Initializing metadata structures...")
 
         # Get all services
-        db = PostgresDb(APP_SETTINGS["CREDENTIALS"]["POSTGRES"])
-        db.connect()
+        db = RSMongoDB()
         resources = get_services(db)
 
         # Create embeddings
         embeddings = create_metadata_embeddings(resources, db)
-
-        db.close_connection()
 
         # Store embeddings
         embeddings.to_parquet(embeddings_path)
@@ -47,11 +45,17 @@ class MetadataStructure:
         # Store similarities
         similarities.to_parquet(similarities_path)
 
-    # getters
+    def update(self, embeddings_path, similarities_path):
 
-    # update
+        # delete structures
+        os.remove(embeddings_path)
+        os.remove(similarities_path)
+
+        self.initialize_structures(embeddings_path, similarities_path)
+        self.embeddings = read_parquet(embeddings_path)
+        self.similarities = read_parquet(similarities_path)
 
 
 # global variable
-METADATA_STRUCTURES = MetadataStructure(APP_SETTINGS["EMBEDDINGS_STORAGE_PATH"] + "metadata_embeddings.parquet",
-                                        APP_SETTINGS["SIMILARITIES_STORAGE_PATH"] + "metadata_similarities.parquet")
+METADATA_STRUCTURES = MetadataStructure(APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["EMBEDDINGS_STORAGE_PATH"] + "metadata_embeddings.parquet",
+                                        APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SIMILARITIES_STORAGE_PATH"] + "metadata_similarities.parquet")

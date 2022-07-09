@@ -10,8 +10,11 @@ def create_text_embeddings(resources):
     @param resources: DataFrame
     @return: DataFrame
     """
+
+    sbert_settings = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SBERT"]
+
     # Initialize SBERT model
-    model = SentenceTransformer(APP_SETTINGS["SBERT"]["MODEL"], device=APP_SETTINGS["SBERT"]["DEVICE"])
+    model = SentenceTransformer(sbert_settings["MODEL"], device=sbert_settings["DEVICE"])
 
     # Get the text attributes of the resources
     text_of_resources = resources["name"] + ". " + resources["description"]

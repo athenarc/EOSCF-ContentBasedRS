@@ -14,10 +14,9 @@ def filtering(db, resources, viewing_resource, purchased_resources):
     logger.info(f"Filter resources...")
 
     # Get non-published resources
-    non_published_resources = list(map(str, db.get_services(conditions="status != 'published'")["service_id"].to_list()))
+    non_published_resources = list(map(str, db.get_services(conditions={"status": {"$ne": "published"}})["service_id"].to_list()))
 
     # Get the indexes of viewing, purchased and non-published resources
     indexes_to_drop = list(set(non_published_resources + [viewing_resource] + purchased_resources))
 
-    # Return
     return resources.drop(labels=indexes_to_drop)

@@ -1,16 +1,22 @@
 import logging
 
+import sentry_sdk
 import uvicorn
+
+logging.basicConfig(level=logging.INFO, format='%(levelname)s | %(asctime)s | %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S')
 
 from api.routes.add_routes import initialize_routes
 from api.settings import APP_SETTINGS
 from fastapi import FastAPI
 
-logging.basicConfig(level=logging.INFO, format='%(levelname)s | %(asctime)s | %(message)s',
-                    datefmt='%m/%d/%Y %I:%M:%S')
-
+sentry_sdk.init(
+    dsn=APP_SETTINGS['CREDENTIALS']['SENTRY_SDN'],
+    traces_sample_rate=1.0
+)
 
 app = FastAPI()
+
 initialize_routes(app)
 
 

@@ -14,6 +14,12 @@ def read_settings():
     with open(args.config_file) as file:
         backend_settings = yaml.load(file, Loader=yaml.FullLoader)
 
+    # We need to know if we are running in prod or dev env
+    if 'prod' in args.config_file:
+        backend_settings['PROD'] = True
+    else:
+        backend_settings['PROD'] = False
+
     credentials = dotenv_values(".env")
 
     return {

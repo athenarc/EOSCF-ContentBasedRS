@@ -14,6 +14,8 @@ sentry_sdk.init(
     dsn=APP_SETTINGS['CREDENTIALS']['SENTRY_SDN'],
     traces_sample_rate=1.0
 )
+if not APP_SETTINGS['BACKEND']['PROD']:
+    sentry_sdk.init()  # Disable sentry if we are not in a dev environment
 
 app = FastAPI()
 

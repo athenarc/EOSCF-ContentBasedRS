@@ -19,7 +19,7 @@ class MongoDbConnector:
 
     def connect(self):
         try:
-            logger.info('Connecting to the Mongo database...')
+            logger.debug('Connecting to the Mongo database...')
             self._conn = MongoClient(self._uri)
             self._db = self._conn[self._db_name]
 
@@ -31,22 +31,21 @@ class RSMongoDB:
     def __init__(self):
         self.mongo_connector = MongoDbConnector(APP_SETTINGS["CREDENTIALS"]['RS_MONGO_URI'],
                                                 APP_SETTINGS["CREDENTIALS"]['RS_MONGO_DB'])
+        self.mongo_connector.connect()
 
+    # TODO get only attributes?
     def get_services(self, attributes=None, conditions=None):
         if conditions is None:
             conditions = {}
         if attributes is None:
             attributes = []
 
-        self.mongo_connector.connect()
         services = pd.DataFrame(list(self.mongo_connector.get_db()["service"].find(conditions)))
-
         services.rename(columns={'_id': 'service_id'}, inplace=True)
 
         return services[["service_id"] + attributes]
 
     def get_scientific_domains(self):
-        self.mongo_connector.connect()
         return [domain["_id"] for domain in self.mongo_connector.get_db()["scientific_domain"].find({}, {"_id": 1})]
 
     def get_categories(self):
@@ -55,6 +54,7 @@ class RSMongoDB:
     def get_target_users(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["target_user"].find({}, {"_id": 1})]
 
+    # TODO change it when i can get the info from recommender db
     def get_user_services(self, user_id):
         return []
 
@@ -63,5 +63,5 @@ class InternalMongoDB:
     def __init__(self):
         self.mongo_connector = MongoDbConnector(APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_URI'],
                                                 APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_DATABASE'])
-
+        self.mongo_connector.connect()
     # TODO: This is were functions like storing logging will be implemented

@@ -28,6 +28,25 @@ def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=Non
 
     candidates = ordering(candidates)
 
+    # TODO: implement
     re_ranking(candidates)
 
     return candidates[:recommendations_num].index.tolist()
+
+
+# def test_recommendation(viewed_resource_id, purchases, recommendations_num=5, viewed_weight=0.5, metadata_weight=0.5):
+#     db = PostgresDb(APP_SETTINGS["CREDENTIALS"])
+#     db.connect()
+#
+#     candidates = get_recommendation_candidates(viewed_resource_id, purchased_resources=purchases,
+#                                                view_weight=viewed_weight, metadata_weight=metadata_weight)
+#
+#     candidates = filtering(db, candidates, viewed_resource_id, purchases)
+#
+#     db.close_connection()
+#
+#     candidates = ordering(candidates)
+#
+#     re_ranking(candidates)
+#
+#     return candidates[:recommendations_num].index.tolist()

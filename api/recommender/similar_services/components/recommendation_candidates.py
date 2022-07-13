@@ -1,9 +1,11 @@
-import pandas as pd
-import numpy as np
 import logging
 
-from api.recommender.similar_services.initialization.metadata_structure import METADATA_STRUCTURES
-from api.recommender.similar_services.initialization.text_structure import TEXT_STRUCTURES
+import numpy as np
+import pandas as pd
+from api.recommender.similar_services.initialization.metadata_structure import \
+    METADATA_STRUCTURES
+from api.recommender.similar_services.initialization.text_structure import \
+    TEXT_STRUCTURES
 
 logger = logging.getLogger(__name__)
 
@@ -25,17 +27,21 @@ def get_recommendation_candidates(view_resource, purchased_resources, view_weigh
     logger.info("Calculate similarities...")
 
     # Initialize weights
-    indexing = METADATA_STRUCTURES.embeddings.index.to_list()
-    weights = pd.Series(np.zeros(METADATA_STRUCTURES.similarities.shape[0]), index=indexing)
-    # Add the weight of the view_resource
-    weights.loc[view_resource] = view_weight
-    # Add the weights of each purchased resource
+    indexing = METADATA_STRUCTURES.embeddings().index.to_list()
+    weights = pd.Series(np.zeros(METADATA_STRUCTURES.similarities().shape[0]), index=indexing)
+
+    # Add the weights of view_resource and purchased resources
     if len(purchased_resources) > 0:
         weights.loc[purchased_resources] = (1-view_weight)*(1/len(purchased_resources))
+        weights.loc[str(view_resource)] = view_weight
+    else:
+        weights.loc[str(view_resource)] = 1.0
 
     # Calculate the metadata and text similarity of each resource
-    metadata_similarity = pd.Series(np.average(METADATA_STRUCTURES.similarities, weights=weights, axis=1), index=indexing)
-    text_similarity = pd.Series(np.average(TEXT_STRUCTURES.similarities, weights=weights, axis=1), index=indexing)
+    metadata_similarity = pd.Series(np.average(METADATA_STRUCTURES.similarities(), weights=weights, axis=1),
+                                    index=indexing)
+    text_similarity = pd.Series(np.average(TEXT_STRUCTURES.similarities(), weights=weights, axis=1),
+                                index=indexing)
 
     # Calculate the weighted average of the similarities
     candidates = pd.Series(np.average(pd.concat([metadata_similarity, text_similarity], axis=1),

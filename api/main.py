@@ -17,14 +17,9 @@ sentry_sdk.init(
 if not APP_SETTINGS['BACKEND']['PROD']:
     sentry_sdk.init()  # Disable sentry if we are not in a dev environment
 
+
 app = FastAPI()
-
 initialize_routes(app)
-
-
-@app.get("/health")
-def health_check():
-    return {"message": "App has initialised and is running"}
 
 
 def start_app():

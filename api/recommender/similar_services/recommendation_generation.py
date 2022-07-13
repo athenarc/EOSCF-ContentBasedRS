@@ -1,6 +1,6 @@
 import logging
 
-from api.databases.mongo import RSMongoDB
+from api.databases.mongo import InternalMongoDB, RSMongoDB
 from api.recommender.similar_services.components.filtering import filtering
 from api.recommender.similar_services.components.ordering import ordering
 from api.recommender.similar_services.components.recommendation_candidates import \
@@ -10,13 +10,30 @@ from api.recommender.similar_services.components.reranking import re_ranking
 logger = logging.getLogger(__name__)
 
 
-def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=None):
+class IdNotExists(Exception):
+    """ Will be thrown when the queried id was not found """
+    pass
 
+
+def arguments_exist(db, viewed_service_id, user_id, recommendations_num):
+    """
+    Checks if the given service id and user id exists
+    """
+    if not db.is_valid_service(viewed_service_id):
+        raise IdNotExists("Service id does not exist.")
+
+    if not db.is_valid_user(user_id):
+        raise IdNotExists("User id does not exist.")
+
+
+def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=None):
     # TODO add them to version
     viewed_weight = 0.5
     metadata_weight = 0.5
 
     db = RSMongoDB()
+
+    arguments_exist(db, viewed_resource_id, user_id, recommendations_num)
 
     logger.info("Get user purchases...")
     purchases = list(map(str, db.get_user_services(user_id))) if user_id is not None else []
@@ -31,8 +48,15 @@ def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=Non
     # TODO: implement
     re_ranking(candidates)
 
-    return candidates[:recommendations_num].index.tolist()
+    recommendation = [{"service_id": int(service_id), "score": score} for service_id, score in
+                      candidates[:recommendations_num].items()]
 
+    # if APP_SETTINGS['BACKEND']['PROD']:
+    internal_db = InternalMongoDB()
+    internal_db.save_recommendation(recommendation=recommendation, service_id=viewed_resource_id, user_id=user_id,
+                                    history_service_ids=purchases)
+
+    return recommendation
 
 # def test_recommendation(viewed_resource_id, purchases, recommendations_num=5, viewed_weight=0.5, metadata_weight=0.5):
 #     db = PostgresDb(APP_SETTINGS["CREDENTIALS"])

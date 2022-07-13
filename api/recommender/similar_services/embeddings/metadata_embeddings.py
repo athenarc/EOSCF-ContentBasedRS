@@ -38,7 +38,8 @@ def create_metadata_embeddings(resources, db):
         dump(binarizer, open(binarizers_dir + "/" + attribute + '_binarizer.pkl', 'wb'))
 
     # Concatenate the embeddings of all attributes
-    embeddings = pd.DataFrame(data=np.concatenate(tuple(partial_embeddings), axis=1), index=resources["service_id"].to_list())
+    embeddings = pd.DataFrame(data=np.concatenate(tuple(partial_embeddings), axis=1),
+                              index=resources["service_id"].to_list())
     embeddings.columns = embeddings.columns.astype(str)
 
     return embeddings

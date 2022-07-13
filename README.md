@@ -20,9 +20,9 @@ The following variables should be set in the .env file
 ```shell
 # These variable are of our mongo which will be used for logging recommendations
 # Should not be confused with the RS Mongo
-INTERNAL_MONGO_HOST=mongo # The host of the internal mongo deployed by compose
+INTERNAL_MONGO_HOST=internal_mongo # The hostname of the internal mongo deployed by compose
 INTERNAL_MONGO_PORT=27017 # The port of the internal mongo deployed by compose
-INTERNAL_MONGO_DATABASE=recommender # The name of the database we are using for internal storage
+INTERNAL_MONGO_DATABASE=internal_recommender # The name of the database we are using for internal storage
 INTERNAL_MONGO_USERNAME="admin" # The username of a user of the internal mongo deployed by compose
 INTERNAL_MONGO_PASSWORD="admin" # The password of a user of the internal mongo deployed by compose
 # Currently we need the uri too, in a future version we will create it from the above variables

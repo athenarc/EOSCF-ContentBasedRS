@@ -1,7 +1,6 @@
 import pandas as pd
-from sentence_transformers import SentenceTransformer
-
 from api.settings import APP_SETTINGS
+from sentence_transformers import SentenceTransformer
 
 
 def create_text_embeddings(resources):
@@ -10,7 +9,6 @@ def create_text_embeddings(resources):
     @param resources: DataFrame
     @return: DataFrame
     """
-
     sbert_settings = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SBERT"]
 
     # Initialize SBERT model
@@ -20,9 +18,9 @@ def create_text_embeddings(resources):
     text_of_resources = resources["name"] + ". " + resources["description"]
 
     # Get the resources' embeddings
-    SBERT_embeddings = model.encode(text_of_resources.to_list())
+    sbert_embeddings = model.encode(text_of_resources.to_list())
 
-    embeddings = pd.DataFrame(SBERT_embeddings, index=resources["service_id"])
+    embeddings = pd.DataFrame(sbert_embeddings, index=resources["service_id"])
     embeddings.columns = embeddings.columns.astype(str)
 
     return embeddings

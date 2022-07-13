@@ -1,7 +1,7 @@
 version: "3.5"
 
 services:
-  mongo:
+  internal_mongo:
     image: mongo:latest
     container_name: internal_mongo
     environment:

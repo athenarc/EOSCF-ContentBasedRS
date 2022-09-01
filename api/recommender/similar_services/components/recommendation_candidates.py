@@ -2,10 +2,8 @@ import logging
 
 import numpy as np
 import pandas as pd
-from api.recommender.similar_services.initialization.metadata_structure import \
-    METADATA_STRUCTURES
-from api.recommender.similar_services.initialization.text_structure import \
-    TEXT_STRUCTURES
+from api.recommender.similar_services.initialization import (
+    metadata_structure, text_structure)
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +11,7 @@ logger = logging.getLogger(__name__)
 # TODO: use of purchase time?
 def get_recommendation_candidates(view_resource, purchased_resources, view_weight=0.5, metadata_weight=0.5):
     """
-    Creates the a structure with the score of each resource based on the viewing and purchased resources
+    Creates a structure with the score of each resource based on the viewing and purchased resources
     Score of resource i S_i = metadata_weight * metadata_similarity(i, viewed_resource, purchased_resources) +
                               (1-metadata_weight) * text_similarity(i, viewed_resource, purchased_resources)
     , where <>_similarity(i, view_resource, purchased_resources) = view_weight * sim(i, view_resource) +
@@ -24,11 +22,13 @@ def get_recommendation_candidates(view_resource, purchased_resources, view_weigh
     @param metadata_weight: float [0,1], the weight of the metadata similarity in the score calculation
     @return:
     """
-    logger.info("Calculate similarities...")
+    logger.debug("Calculating similarities...")
+    metadata_similarities = metadata_structure.get_metadata_similarities()
+    text_similarities = text_structure.get_text_similarities()
 
     # Initialize weights
-    indexing = METADATA_STRUCTURES.embeddings().index.to_list()
-    weights = pd.Series(np.zeros(METADATA_STRUCTURES.similarities().shape[0]), index=indexing)
+    indexing = metadata_similarities.index.to_list()
+    weights = pd.Series(np.zeros(metadata_similarities.shape[0]), index=indexing)
 
     # Add the weights of view_resource and purchased resources
     if len(purchased_resources) > 0:
@@ -38,9 +38,9 @@ def get_recommendation_candidates(view_resource, purchased_resources, view_weigh
         weights.loc[str(view_resource)] = 1.0
 
     # Calculate the metadata and text similarity of each resource
-    metadata_similarity = pd.Series(np.average(METADATA_STRUCTURES.similarities(), weights=weights, axis=1),
+    metadata_similarity = pd.Series(np.average(metadata_similarities, weights=weights, axis=1),
                                     index=indexing)
-    text_similarity = pd.Series(np.average(TEXT_STRUCTURES.similarities(), weights=weights, axis=1),
+    text_similarity = pd.Series(np.average(text_similarities, weights=weights, axis=1),
                                 index=indexing)
 
     # Calculate the weighted average of the similarities

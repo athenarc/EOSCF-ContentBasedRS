@@ -32,6 +32,15 @@ INTERNAL_MONGO_URI="mongodb://admin:admin@mongo:27017"
 RS_MONGO_URI="mongodb://admin:admin@rs_mongo:27017"
 RS_MONGO_DB=recommender # The name of the database used in the RS mongo
 
+INTERNAL_REDIS_HOST=redis # The hostname of the internal redis deployed by compose
+INTERNAL_REDIS_PORT=6379 # The port of the internal redis deployed by compose
+INTERNAL_REDIS_PASSWORD=redis_pswd # The password of the internal redis deployed by compose
+
 # The private sdn key for sentry which we use for error logging
 SENTRY_SDN=https://12345...
+
+# Cronitor is used to monitor the offline updating of our RS data structures
+# stored in redis
+CRONITOR_API_KEY=123aababdas...
+
 ```

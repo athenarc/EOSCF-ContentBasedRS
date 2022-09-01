@@ -11,7 +11,7 @@ def filtering(db, resources, viewing_resource, purchased_resources):
     @param viewing_resource:  str, the id of the currently viewing resource
     @param purchased_resources: list<str>, the ids of the user purchased resources
     """
-    logger.info(f"Filter resources...")
+    logger.debug(f"Filter resources...")
 
     # Get non-published resources
     non_published_resources = list(map(str, db.get_services(

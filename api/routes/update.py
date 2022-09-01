@@ -1,10 +1,10 @@
 import logging
 
-from api.recommender.similar_services.initialization.metadata_structure import \
-    METADATA_STRUCTURES
-from api.recommender.similar_services.initialization.text_structure import \
-    TEXT_STRUCTURES
+from api.recommender.project_completion.initialization import association_rules
+from api.recommender.similar_services.initialization import (
+    metadata_structure, text_structure)
 from fastapi import APIRouter, HTTPException
+from api.recommender.exceptions import NoneServices, NoneProjects
 
 logger = logging.getLogger(__name__)
 
@@ -19,13 +19,17 @@ router = APIRouter()
 def update():
     try:
         # Update similar services
-        TEXT_STRUCTURES.update()
-        METADATA_STRUCTURES.update()
+        metadata_structure.create_metadata_similarities()
+        text_structure.create_text_similarities()
+
         # Update project completion
-    except Exception as e:
+        association_rules.create_association_rules()
+
+    except (NoneServices, NoneProjects) as e:
         # Delete all structures that have been initialized
-        TEXT_STRUCTURES.delete()
-        METADATA_STRUCTURES.delete()
+        metadata_structure.delete_metadata_similarities()
+        text_structure.delete_text_similarities()
+        association_rules.delete_association_rules()
 
         logger.error("Failed to update recommenders: " + str(e))
-        raise HTTPException(status_code=404, detail="Failed to update recommenders: " + str(e))
+        raise HTTPException(status_code=500, detail="Failed to update recommenders: " + str(e))

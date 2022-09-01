@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   mongo:
-    image: mongo:latest
+    image: mongo:6.0
     container_name: internal_mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: $INTERNAL_MONGO_USERNAME
@@ -11,11 +11,21 @@ services:
       - EOSC_RECOMMENDATION_SYSTEM_APP
     volumes:
       - type: volume
-        source: EOSCF_RS_INTERNAL_MONGO_DATA
+        source: EOSC_RS_INTERNAL_MONGO_DATA
         target: /data/db
       - type: volume
-        source: EOSCF_RS_INTERNAL_MONGO_CONFIG
+        source: EOSC_RS_INTERNAL_MONGO_CONFIG
         target: /data/configdb
+
+  redis:
+    image: redis:6.2-alpine
+    command: redis-server --save 20 1 --loglevel warning --requirepass $INTERNAL_REDIS_PASSWORD
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    volumes:
+      - type: volume
+        source: EOSCF_RS_INTERNAL_REDIS_DATA
+        target: /data
 
   app:
     build: .
@@ -26,6 +36,7 @@ services:
       - EOSC_RECOMMENDATION_SYSTEM_APP
     depends_on:
       - mongo
+      - redis
 
 
 networks:
@@ -33,7 +44,9 @@ networks:
     name: EOSC_RECOMMENDATION_SYSTEM_APP
 
 volumes:
-  EOSCF_RS_INTERNAL_MONGO_DATA:
-    name: EOSCF_RS_INTERNAL_MONGO_DATA
-  EOSCF_RS_INTERNAL_MONGO_CONFIG:
-    name: EOSCF_RS_INTERNAL_MONGO_CONFIG
+  EOSC_RS_INTERNAL_MONGO_DATA:
+    name: EOSC_RS_INTERNAL_MONGO_DATA
+  EOSC_RS_INTERNAL_MONGO_CONFIG:
+    name: EOSC_RS_INTERNAL_MONGO_CONFIG
+  EOSCF_RS_REDIS_DATA:
+    name: EOSCF_RS_REDIS_DATA

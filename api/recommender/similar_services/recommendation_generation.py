@@ -6,6 +6,7 @@ from api.recommender.similar_services.components.ordering import ordering
 from api.recommender.similar_services.components.recommendation_candidates import \
     get_recommendation_candidates
 from api.recommender.similar_services.components.reranking import re_ranking
+from api.settings import APP_SETTINGS
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +16,7 @@ class IdNotExists(Exception):
     pass
 
 
-def arguments_exist(db, viewed_service_id, user_id, recommendations_num):
+def arguments_exist(db, viewed_service_id, user_id):
     """
     Checks if the given service id and user id exists
     """
@@ -27,15 +28,15 @@ def arguments_exist(db, viewed_service_id, user_id, recommendations_num):
 
 
 def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=None):
-    # TODO add them to version
-    viewed_weight = 0.5
-    metadata_weight = 0.5
+
+    viewed_weight = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["VIEWED_WEIGHT"]
+    metadata_weight = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["METADATA_WEIGHT"]
 
     db = RSMongoDB()
 
-    arguments_exist(db, viewed_resource_id, user_id, recommendations_num)
+    arguments_exist(db, viewed_resource_id, user_id)
 
-    logger.info("Get user purchases...")
+    logger.debug("Get user purchases...")
     purchases = list(map(str, db.get_user_services(user_id))) if user_id is not None else []
 
     candidates = get_recommendation_candidates(viewed_resource_id, purchased_resources=purchases,

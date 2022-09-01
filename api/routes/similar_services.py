@@ -50,6 +50,9 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
     - **user_id**: the id of the user (as it was given in the marketplace)
     - **service_id**: the id of the service currently viewed by the user
     - **num**: number of recommendations we want returned
+
+    **Returns** a list of dicts where service_id is the id of the recommended service and score is the similarity with
+    the currently viewed service.
     """
     try:
         return [Recommendation(service_id=recommendation["service_id"], score=recommendation["score"])
@@ -62,3 +65,17 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
     except IdNotExists as e:
         logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
+
+# class TestRecommendationParameters(BaseModel):
+#     service_id: int
+#     purchase_ids: list = []
+#     num: int = 5
+#
+# @router.post("/rs_evaluation/similar_services/recommendation", response_model=Recommendation)
+# def get_recommendation(recommendation_parameters: TestRecommendationParameters):
+#     return Recommendation(service_ids=
+#                           test_similar_services_recommendation(
+#                               viewed_resource_id=str(recommendation_parameters.service_id),
+#                               purchases=list(map(str, recommendation_parameters.purchase_ids)),
+#                               recommendations_num=recommendation_parameters.num)
+#                           )

@@ -1,82 +1,47 @@
 import logging
-from os import path
 import pandas as pd
-from pandas import read_parquet
 from sklearn.metrics.pairwise import cosine_similarity
 
 from api.databases.mongo import RSMongoDB
+from api.databases.redis import (check_key_existence, delete_object,
+                                 get_object, store_object)
 from api.recommender.similar_services.embeddings.metadata_embeddings import \
     create_metadata_embeddings
-from api.recommender.utils import get_services, silent_remove
-from api.settings import APP_SETTINGS
+from api.recommender.utils import get_services
+from api.recommender.exceptions import NoneServices
 
 logger = logging.getLogger(__name__)
 
 
-class MetadataStructure:
+def create_metadata_similarities():
+    logger.debug("Initializing metadata structures...")
 
-    def __init__(self, embeddings_path, similarities_path):
+    # Get all services
+    db = RSMongoDB()
+    resources = get_services(db)
 
-        self._embeddings_path = embeddings_path
-        self._similarities_path = similarities_path
+    if resources.empty:
+        raise NoneServices
 
-        try:
-            if not path.exists(self._embeddings_path) or not path.exists(self._similarities_path):
-                self.initialize_structures()
+    # Create embeddings
+    embeddings = create_metadata_embeddings(resources, db)
 
-            # Load embeddings and similarities structures
-            self._embeddings = read_parquet(self._embeddings_path)
-            self._similarities = read_parquet(self._similarities_path)
-        except Exception as e:
-            logger.error("Error in metadata structure initialization: " + str(e))
-            self._embeddings = None
-            self._similarities = None
+    # Calculate similarities
+    similarities_array = cosine_similarity(embeddings.to_numpy())
+    indexing = resources["service_id"].to_list()
+    similarities = pd.DataFrame(similarities_array, columns=indexing, index=indexing)
 
-    def initialize_structures(self):
-        logger.info("Initializing metadata structures...")
-
-        # Get all services
-        db = RSMongoDB()
-        resources = get_services(db)
-
-        # Create embeddings
-        embeddings = create_metadata_embeddings(resources, db)
-
-        # Store embeddings
-        embeddings.to_parquet(self._embeddings_path)
-
-        # Calculate similarities
-        similarities_array = cosine_similarity(embeddings.to_numpy())
-        indexing = resources["service_id"].to_list()
-        similarities = pd.DataFrame(similarities_array, columns=indexing, index=indexing)
-        # Store similarities
-        similarities.to_parquet(self._similarities_path)
-
-    def embeddings(self):
-        # TODO if not initialized embeddings?
-        return self._embeddings
-
-    def similarities(self):
-        # TODO if not initialized similarities?
-        return self._similarities
-
-    def update(self):
-
-        self.delete()
-
-        self.initialize_structures()
-        self._embeddings = read_parquet(self._embeddings_path)
-        self._similarities = read_parquet(self._similarities_path)
-
-    def delete(self):
-        silent_remove(self._embeddings_path)
-        self._embeddings = None
-
-        silent_remove(self._similarities_path)
-        self._similarities = None
+    # Store similarities
+    store_object(similarities, "METADATA_SIMILARITY")
 
 
-# global variable
-METADATA_STRUCTURES = MetadataStructure(
-    APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["EMBEDDINGS_STORAGE_PATH"] + "metadata_embeddings.parquet",
-    APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SIMILARITIES_STORAGE_PATH"] + "metadata_similarities.parquet")
+def get_metadata_similarities():
+    return get_object("METADATA_SIMILARITY")
+
+
+def delete_metadata_similarities():
+    delete_object("METADATA_SIMILARITY")
+
+
+def existence_metadata_similarities():
+    return check_key_existence("METADATA_SIMILARITY")

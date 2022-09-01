@@ -37,10 +37,15 @@ class RSMongoDB:
         if attributes is None:
             attributes = []
 
-        services = pd.DataFrame(list(self.mongo_connector.get_db()["service"].find(conditions)))
-        services.rename(columns={'_id': 'service_id'}, inplace=True)
+        services = list(self.mongo_connector.get_db()["service"].find(conditions))
+        if len(services):
+            servicesDf = pd.DataFrame(services)
+            servicesDf.rename(columns={'_id': 'service_id'}, inplace=True)
+            servicesDf = servicesDf[["service_id"] + attributes]
+        else:  # If there are no services
+            servicesDf = pd.DataFrame(columns=["service_id"] + attributes)
 
-        return services[["service_id"] + attributes]
+        return servicesDf
 
     def get_scientific_domains(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["scientific_domain"].find({}, {"_id": 1})]
@@ -51,9 +56,21 @@ class RSMongoDB:
     def get_target_users(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["target_user"].find({}, {"_id": 1})]
 
-    # TODO change it when i can get the info from recommender db
+    # TODO check with dump
     def get_user_services(self, user_id):
-        return []
+        user_projects_services = self.mongo_connector.get_db()["project"].find({"user_id": user_id}, {"services": 1})
+        user_services = set()
+        for project_services in user_projects_services:
+            user_services.update(project_services["services"])
+        return list(user_services)
+
+    # TODO check with dump
+    def get_project_services(self, project_id):
+        return self.mongo_connector.get_db()["project"].find_one({"_id": project_id})["services"]
+
+    # TODO check with dump
+    def get_projects(self):
+        return [project["_id"] for project in self.mongo_connector.get_db()["project"].find({}, {"_id": 1})]
 
     def get_users(self, attributes=None):
         if attributes is None:
@@ -62,12 +79,12 @@ class RSMongoDB:
         return [user["_id"] for user in self.mongo_connector.get_db()["user"].find({}, attributes)]
 
     def is_valid_service(self, service_id):
-        result = self.mongo_connector.get_db()["service"].find({'_id': int(service_id)}, {"_id": 1}).limit(1)
-        return len(list(result)) == 1
+        result = self.mongo_connector.get_db()["service"].find_one({'_id': int(service_id)})
+        return result is not None
 
     def is_valid_user(self, user_id):
-        result = self.mongo_connector.get_db()["user"].find({"_id": int(user_id)}, {"_id": 1}).limit(1)
-        return len(list(result)) == 1
+        result = self.mongo_connector.get_db()["user"].find_one({"_id": int(user_id)})
+        return result is not None
 
 
 class InternalMongoDB:
@@ -76,20 +93,38 @@ class InternalMongoDB:
                                                 APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_DATABASE'])
         self.mongo_connector.connect()
 
-    # TODO: This is were functions like storing logging will be implemented
     def save_recommendation(self, recommendation, user_id, service_id, history_service_ids):
         document = {
             "date": datetime.datetime.utcnow(),
-            # TODO: change it when versioning is available
-            "version": "1.0",
-            "service_id": service_id,
-            "version": "1.0",
+            "version": APP_SETTINGS["BACKEND"]["VERSION_NAME"],
             "service_id": int(service_id),
             "recommendation": recommendation,
             "user_id": int(user_id),
             "history_service_ids": history_service_ids
         }
 
-        document_id = self.mongo_connector.get_db()['recommendation'].insert_one(document)
+        self.mongo_connector.get_db()['recommendation'].insert_one(document)
 
-        logger.info("Recommendation was successfully saved!")
+        logger.debug("Recommendation was successfully saved!")
+
+    def update_version(self):
+        version = {
+            "name": APP_SETTINGS["BACKEND"]["VERSION_NAME"],
+            "similar_services": {
+                "metadata": APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["METADATA"],
+                "text_attributes": APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["TEXT_ATTRIBUTES"],
+                "metadata_weight": APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["METADATA_WEIGHT"],
+                "viewed_weight": APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["VIEWED_WEIGHT"],
+                "sbert_model": APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SBERT"]["MODEL"]
+            },
+            "project_completion": {
+                "min_support": APP_SETTINGS["BACKEND"]["PROJECT_COMPLETION"]["MIN_SUPPORT"],
+                "min_confidence": APP_SETTINGS["BACKEND"]["PROJECT_COMPLETION"]["MIN_CONFIDENCE"]
+            }
+
+        }
+
+        # Update the version if it exists or create a new version document
+        self.mongo_connector.get_db()["version"].update_one({"name": version["name"]}, {"$set": version}, upsert=True)
+
+        logger.debug("Recommender version was successfully saved!")

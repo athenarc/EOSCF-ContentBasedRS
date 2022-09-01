@@ -8,6 +8,6 @@ def ordering(resources):
     Ordering the resources by score
     @param resources: DataFrame, scores of resources indexed by resource id
     """
-    logger.info("Order resources...")
+    logger.debug("Order resources...")
 
     return resources.sort_values(ascending=False)

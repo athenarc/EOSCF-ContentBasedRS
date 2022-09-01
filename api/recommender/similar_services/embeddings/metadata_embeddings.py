@@ -1,10 +1,12 @@
 import os
 from pickle import dump
-
 import numpy as np
 import pandas as pd
-from api.settings import APP_SETTINGS
 from sklearn.preprocessing import MultiLabelBinarizer
+
+from api.settings import APP_SETTINGS
+from api.databases.redis import (check_key_existence, delete_object,
+                                 get_object, store_object)
 
 
 def create_metadata_embeddings(resources, db):
@@ -14,13 +16,6 @@ def create_metadata_embeddings(resources, db):
     @param db: PostgresDB
     @return: Dataframe
     """
-
-    binarizers_dir = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["BINARIZERS_STORAGE_PATH"]
-
-    # Delete binarizers if they exist
-    for f in os.listdir(binarizers_dir):
-        if f != '.gitkeep':
-            os.remove(os.path.join(binarizers_dir, f))
 
     # Create new binarizers
     partial_embeddings = []
@@ -34,12 +29,37 @@ def create_metadata_embeddings(resources, db):
         partial_embeddings.append(binarizers[attribute].fit_transform(resources[attribute]))
 
     # save the binarizers
-    for attribute, binarizer in binarizers.items():
-        dump(binarizer, open(binarizers_dir + "/" + attribute + '_binarizer.pkl', 'wb'))
+    store_object(binarizers, "METADATA_BINARIZERS")
 
     # Concatenate the embeddings of all attributes
     embeddings = pd.DataFrame(data=np.concatenate(tuple(partial_embeddings), axis=1),
                               index=resources["service_id"].to_list())
     embeddings.columns = embeddings.columns.astype(str)
 
+    store_object(embeddings, "METADATA_EMBEDDINGS")
+
     return embeddings
+
+
+def get_metadata_binarizers():
+    return get_object("METADATA_BINARIZERS")
+
+
+def delete_metadata_binarizer():
+    delete_object("METADATA_BINARIZERS")
+
+
+def existence_metadata_binarizers():
+    return check_key_existence("METADATA_BINARIZERS")
+
+
+def get_metadata_embeddings():
+    return get_object("METADATA_EMBEDDINGS")
+
+
+def delete_metadata_embeddings():
+    delete_object("METADATA_EMBEDDINGS")
+
+
+def existence_metadata_embeddings():
+    return check_key_existence("METADATA_EMBEDDINGS")

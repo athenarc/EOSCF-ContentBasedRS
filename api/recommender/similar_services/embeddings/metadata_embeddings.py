@@ -7,15 +7,49 @@ from sklearn.preprocessing import MultiLabelBinarizer
 from api.settings import APP_SETTINGS
 from api.databases.redis import (check_key_existence, delete_object,
                                  get_object, store_object)
+from api.recommender.exceptions import MissingStructure
+from api.databases.mongo import RSMongoDB
 
 
-def create_metadata_embeddings(resources, db):
+def create_metadata_embedding(resource):
+    # Get the binarizers
+    if not existence_metadata_binarizers():
+        raise MissingStructure("Binarizers cannot be found!")
+
+    binarizers = get_metadata_binarizers()
+
+    # Calculate the embedding of the resource
+    partial_embedding = []
+    for attribute, binarizer in binarizers.items():
+        partial_embedding.append(binarizer.transform([resource[attribute]]))
+
+    embedding = np.concatenate(tuple(partial_embedding), axis=1)
+
+    return embedding[0]
+
+
+def update_metadata_embedding(new_resource):
+
+    # Create the embedding of the new resource
+    embedding = create_metadata_embedding(new_resource)
+
+    # Get embeddings
+    embeddings = get_metadata_embeddings()
+
+    # Update
+    embeddings.loc[str(new_resource["_id"])] = embedding
+
+    return embeddings
+
+
+def create_metadata_embeddings(resources):
     """
     Creates the metadata-based embeddings of each resource
     @param resources:
-    @param db: PostgresDB
     @return: Dataframe
     """
+
+    db = RSMongoDB()
 
     # Create new binarizers
     partial_embeddings = []

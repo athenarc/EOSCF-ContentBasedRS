@@ -3,8 +3,8 @@ from multiprocessing import Process
 
 import cronitor
 from api.recommender.project_completion.initialization import association_rules
-from api.recommender.similar_services.initialization import (
-    metadata_structure, text_structure)
+from api.recommender.similar_services.similarities import (
+    metadata_similarities, text_similarities)
 from api.routes.update import update
 from api.settings import APP_SETTINGS
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -37,13 +37,13 @@ def scheduled_update():
 
 
 def initialize_structures_if_not_exist():
-    if not metadata_structure.existence_metadata_similarities():
+    if not metadata_similarities.existence_metadata_similarities():
         logging.info("Metadata structure does not exist. Creating...")
-        metadata_structure.create_metadata_similarities()
+        metadata_similarities.create_metadata_similarities()
 
-    if not text_structure.existence_text_similarities():
+    if not text_similarities.existence_text_similarities():
         logging.info("Text structure does not exist. Creating...")
-        text_structure.create_text_similarities()
+        text_similarities.create_text_similarities()
 
     if not association_rules.existence_association_rules():
         logging.info("Association rules do not exist. Creating...")

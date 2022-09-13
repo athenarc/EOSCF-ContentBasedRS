@@ -39,7 +39,7 @@ def create_association_rules():
                                  min_support=APP_SETTINGS['BACKEND']['PROJECT_COMPLETION']['MIN_SUPPORT'],
                                  use_colnames=True)
 
-    rules = association_rules(frequent_itemsets, metric="lift",
+    rules = association_rules(frequent_itemsets, metric="confidence",
                               min_threshold=APP_SETTINGS['BACKEND']['PROJECT_COMPLETION']['MIN_CONFIDENCE'])
 
     # Convert frozensets to list

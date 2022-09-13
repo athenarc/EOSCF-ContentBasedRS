@@ -25,12 +25,13 @@ INTERNAL_MONGO_PORT=27017 # The port of the internal mongo deployed by compose
 INTERNAL_MONGO_DATABASE=internal_recommender # The name of the database we are using for internal storage
 INTERNAL_MONGO_USERNAME="admin" # The username of a user of the internal mongo deployed by compose
 INTERNAL_MONGO_PASSWORD="admin" # The password of a user of the internal mongo deployed by compose
-# Currently we need the uri too, in a future version we will create it from the above variables
-INTERNAL_MONGO_URI="mongodb://admin:admin@mongo:27017"
 
-# RS Mongo
-RS_MONGO_URI="mongodb://admin:admin@rs_mongo:27017"
-RS_MONGO_DB=recommender # The name of the database used in the RS mongo
+# RS Mongo (from Cyfronet)
+RS_MONGO_HOST=localhost # The hostname of the external RS mongo
+RS_MONGO_PORT=27017 # The port of the external RS mongo
+RS_MONGO_DATABASE=rs_dump # The name of the RS database
+RS_MONGO_USERNAME=admin # The username of a user of the external RS mongo
+RS_MONGO_PASSWORD=admin # The password of a user of the external RS mongo
 
 INTERNAL_REDIS_HOST=redis # The hostname of the internal redis deployed by compose
 INTERNAL_REDIS_PORT=6379 # The port of the internal redis deployed by compose
@@ -42,5 +43,4 @@ SENTRY_SDN=https://12345...
 # Cronitor is used to monitor the offline updating of our RS data structures
 # stored in redis
 CRONITOR_API_KEY=123aababdas...
-
 ```

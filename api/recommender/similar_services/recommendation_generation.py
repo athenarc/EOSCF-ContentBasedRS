@@ -7,13 +7,9 @@ from api.recommender.similar_services.components.recommendation_candidates impor
     get_recommendation_candidates
 from api.recommender.similar_services.components.reranking import re_ranking
 from api.settings import APP_SETTINGS
+from api.recommender.exceptions import IdNotExists
 
 logger = logging.getLogger(__name__)
-
-
-class IdNotExists(Exception):
-    """ Will be thrown when the queried id was not found """
-    pass
 
 
 def arguments_exist(db, viewed_service_id, user_id):
@@ -58,20 +54,3 @@ def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=Non
                                     history_service_ids=purchases)
 
     return recommendation
-
-# def test_recommendation(viewed_resource_id, purchases, recommendations_num=5, viewed_weight=0.5, metadata_weight=0.5):
-#     db = PostgresDb(APP_SETTINGS["CREDENTIALS"])
-#     db.connect()
-#
-#     candidates = get_recommendation_candidates(viewed_resource_id, purchased_resources=purchases,
-#                                                view_weight=viewed_weight, metadata_weight=metadata_weight)
-#
-#     candidates = filtering(db, candidates, viewed_resource_id, purchases)
-#
-#     db.close_connection()
-#
-#     candidates = ordering(candidates)
-#
-#     re_ranking(candidates)
-#
-#     return candidates[:recommendations_num].index.tolist()

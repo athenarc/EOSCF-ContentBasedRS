@@ -5,6 +5,37 @@ from api.settings import APP_SETTINGS
 from sentence_transformers import SentenceTransformer
 
 
+def create_text_embedding(resource):
+    sbert_settings = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["SBERT"]
+
+    # Initialize SBERT model
+    model = SentenceTransformer(sbert_settings["MODEL"], device=sbert_settings["DEVICE"])
+
+    # Get the text attributes of the resources
+    text_of_resource = ". ".join([
+        resource[attribute] for attribute in APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["TEXT_ATTRIBUTES"]])
+
+    # Get the resources' embeddings
+    sbert_embedding = model.encode([text_of_resource],
+                                   show_progress_bar=False if APP_SETTINGS['BACKEND']['PROD'] else True)
+
+    return sbert_embedding[0]
+
+
+# TODO union with metadata
+def update_text_embedding(new_resource):
+    # Create the embedding of the new resource
+    embedding = create_text_embedding(new_resource)
+
+    # Get embeddings
+    embeddings = get_text_embeddings()
+
+    # Update
+    embeddings.loc[str(new_resource["_id"])] = embedding
+
+    return embeddings
+
+
 def create_text_embeddings(resources):
     """
     Creates the text-based embeddings of each resource

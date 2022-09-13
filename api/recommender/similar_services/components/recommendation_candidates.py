@@ -2,8 +2,8 @@ import logging
 
 import numpy as np
 import pandas as pd
-from api.recommender.similar_services.initialization import (
-    metadata_structure, text_structure)
+from api.recommender.similar_services.similarities.metadata_similarities import get_metadata_similarities
+from api.recommender.similar_services.similarities.text_similarities import get_text_similarities
 
 logger = logging.getLogger(__name__)
 
@@ -23,8 +23,8 @@ def get_recommendation_candidates(view_resource, purchased_resources, view_weigh
     @return:
     """
     logger.debug("Calculating similarities...")
-    metadata_similarities = metadata_structure.get_metadata_similarities()
-    text_similarities = text_structure.get_text_similarities()
+    metadata_similarities = get_metadata_similarities()
+    text_similarities = get_text_similarities()
 
     # Initialize weights
     indexing = metadata_similarities.index.to_list()

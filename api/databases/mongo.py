@@ -8,6 +8,12 @@ from pymongo import MongoClient
 logger = logging.getLogger(__name__)
 
 
+def form_mongo_url(username, password, host, port) -> str:
+    return f"mongodb://{username}" \
+           f":{password}" \
+           f"@{host}:{port}"
+
+
 class MongoDbConnector:
     def __init__(self, uri, db_name):
         self._uri = uri
@@ -26,8 +32,15 @@ class MongoDbConnector:
 
 class RSMongoDB:
     def __init__(self):
-        self.mongo_connector = MongoDbConnector(APP_SETTINGS["CREDENTIALS"]['RS_MONGO_URI'],
-                                                APP_SETTINGS["CREDENTIALS"]['RS_MONGO_DB'])
+        self.mongo_connector = MongoDbConnector(
+            uri=form_mongo_url(
+                APP_SETTINGS["CREDENTIALS"]['RS_MONGO_USERNAME'],
+                APP_SETTINGS["CREDENTIALS"]['RS_MONGO_PASSWORD'],
+                APP_SETTINGS["CREDENTIALS"]['RS_MONGO_HOST'],
+                APP_SETTINGS["CREDENTIALS"]['RS_MONGO_PORT']
+            ),
+            db_name=APP_SETTINGS["CREDENTIALS"]['RS_MONGO_DATABASE']
+        )
         self.mongo_connector.connect()
 
     # TODO get only attributes?
@@ -47,6 +60,12 @@ class RSMongoDB:
 
         return servicesDf
 
+    def get_service(self, service_id):
+        return self.mongo_connector.get_db()["service"].find_one({'_id': int(service_id)})
+
+    def get_project(self, project_id):
+        return self.mongo_connector.get_db()["project"].find_one({"_id": int(project_id)})
+
     def get_scientific_domains(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["scientific_domain"].find({}, {"_id": 1})]
 
@@ -56,7 +75,6 @@ class RSMongoDB:
     def get_target_users(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["target_user"].find({}, {"_id": 1})]
 
-    # TODO check with dump
     def get_user_services(self, user_id):
         user_projects_services = self.mongo_connector.get_db()["project"].find({"user_id": user_id}, {"services": 1})
         user_services = set()
@@ -64,11 +82,9 @@ class RSMongoDB:
             user_services.update(project_services["services"])
         return list(user_services)
 
-    # TODO check with dump
     def get_project_services(self, project_id):
         return self.mongo_connector.get_db()["project"].find_one({"_id": project_id})["services"]
 
-    # TODO check with dump
     def get_projects(self):
         return [project["_id"] for project in self.mongo_connector.get_db()["project"].find({}, {"_id": 1})]
 
@@ -79,18 +95,27 @@ class RSMongoDB:
         return [user["_id"] for user in self.mongo_connector.get_db()["user"].find({}, attributes)]
 
     def is_valid_service(self, service_id):
-        result = self.mongo_connector.get_db()["service"].find_one({'_id': int(service_id)})
-        return result is not None
+        return self.get_service(service_id) is not None
 
     def is_valid_user(self, user_id):
         result = self.mongo_connector.get_db()["user"].find_one({"_id": int(user_id)})
         return result is not None
 
+    def is_valid_project(self, project_id):
+        return self.get_project(project_id) is not None
+
 
 class InternalMongoDB:
     def __init__(self):
-        self.mongo_connector = MongoDbConnector(APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_URI'],
-                                                APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_DATABASE'])
+        self.mongo_connector = MongoDbConnector(
+            uri=form_mongo_url(
+                APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_USERNAME'],
+                APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_PASSWORD'],
+                APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_HOST'],
+                APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_PORT']
+            ),
+            db_name=APP_SETTINGS["CREDENTIALS"]['INTERNAL_MONGO_DATABASE']
+        )
         self.mongo_connector.connect()
 
     def save_recommendation(self, recommendation, user_id, service_id, history_service_ids):

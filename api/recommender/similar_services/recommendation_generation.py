@@ -1,13 +1,13 @@
 import logging
 
 from api.databases.mongo import InternalMongoDB, RSMongoDB
+from api.recommender.exceptions import IdNotExists
 from api.recommender.similar_services.components.filtering import filtering
 from api.recommender.similar_services.components.ordering import ordering
 from api.recommender.similar_services.components.recommendation_candidates import \
     get_recommendation_candidates
 from api.recommender.similar_services.components.reranking import re_ranking
 from api.settings import APP_SETTINGS
-from api.recommender.exceptions import IdNotExists
 
 logger = logging.getLogger(__name__)
 
@@ -19,12 +19,11 @@ def arguments_exist(db, viewed_service_id, user_id):
     if not db.is_valid_service(viewed_service_id):
         raise IdNotExists("Service id does not exist.")
 
-    if not db.is_valid_user(user_id):
+    if user_id is not None and not db.is_valid_user(user_id):
         raise IdNotExists("User id does not exist.")
 
 
 def create_recommendation(viewed_resource_id, recommendations_num=5, user_id=None):
-
     viewed_weight = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["VIEWED_WEIGHT"]
     metadata_weight = APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]["METADATA_WEIGHT"]
 

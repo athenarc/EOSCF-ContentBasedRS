@@ -9,14 +9,16 @@ logger = logging.getLogger(__name__)
 
 
 def form_mongo_url(username, password, host, port) -> str:
-    return f"mongodb://{username}" \
-           f":{password}" \
-           f"@{host}:{port}"
+    uri = f"mongodb://{username}:{password}@" if username and password else ""
+    uri += f"{host}:{port}"
+    return uri
 
 
 class MongoDbConnector:
     def __init__(self, uri, db_name):
         self._uri = uri
+        print(self._uri)
+
         self._conn = None
         self._db_name = db_name
         self._db = None
@@ -124,7 +126,7 @@ class InternalMongoDB:
             "version": APP_SETTINGS["BACKEND"]["VERSION_NAME"],
             "service_id": int(service_id),
             "recommendation": recommendation,
-            "user_id": int(user_id),
+            "user_id": int(user_id) if user_id is not None else None,
             "history_service_ids": history_service_ids
         }
 

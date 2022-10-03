@@ -17,7 +17,7 @@ class Recommendation(BaseModel):
 
 
 class ProjectCompletionRecommendationParameters(BaseModel):
-    project_id: int = 1605
+    project_id: int
     num: int = 5
 
     @validator('project_id')

@@ -19,11 +19,17 @@ class Recommendation(BaseModel):
 
 
 class SimilarServicesRecommendationParameters(BaseModel):
-    user_id: int = 1
-    service_id: int = 1
+    user_id: int = None
+    service_id: int
     num: int = 5
 
-    @validator('user_id', 'service_id')
+    @validator('user_id')
+    def id_is_positive_or_none(cls, v):
+        if v is not None and v < 0:
+            raise ValueError('Ids must be positive integers')
+        return v
+
+    @validator('service_id')
     def id_is_positive(cls, v):
         if v < 0:
             raise ValueError('Ids must be positive integers')
@@ -65,17 +71,3 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
     except IdNotExists as e:
         logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
-
-# class TestRecommendationParameters(BaseModel):
-#     service_id: int
-#     purchase_ids: list = []
-#     num: int = 5
-#
-# @router.post("/rs_evaluation/similar_services/recommendation", response_model=Recommendation)
-# def get_recommendation(recommendation_parameters: TestRecommendationParameters):
-#     return Recommendation(service_ids=
-#                           test_similar_services_recommendation(
-#                               viewed_resource_id=str(recommendation_parameters.service_id),
-#                               purchases=list(map(str, recommendation_parameters.purchase_ids)),
-#                               recommendations_num=recommendation_parameters.num)
-#                           )

@@ -3,13 +3,13 @@ import logging
 import api.scheduling.initialization
 import sentry_sdk
 import uvicorn
+from api.databases.content_based_rec_db import ContentBasedRecsMongoDB
 from api.settings import APP_SETTINGS
 
 logging.basicConfig(level=logging.INFO if APP_SETTINGS['BACKEND']['PROD'] else logging.DEBUG,
                     format='%(levelname)s | %(asctime)s | %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S')
 
-from api.databases.mongo import InternalMongoDB
 from api.routes.add_routes import initialize_routes
 from fastapi import FastAPI
 
@@ -27,8 +27,9 @@ initialize_routes(app)
 @app.on_event("startup")
 async def startup_event():
     # Keep track of the RS version we are running (specified in config file)
-    db = InternalMongoDB()
-    db.update_version()
+    if APP_SETTINGS["BACKEND"]["MODE"] == "RS":
+        db = ContentBasedRecsMongoDB()
+        db.update_version()
 
 
 def start_app():

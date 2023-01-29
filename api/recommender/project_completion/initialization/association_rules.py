@@ -2,11 +2,12 @@ import pandas as pd
 from mlxtend.frequent_patterns import association_rules, fpgrowth
 from mlxtend.preprocessing import TransactionEncoder
 
-from api.databases.mongo import RSMongoDB
-from api.databases.redis import (check_key_existence, delete_object,
-                                 get_object, store_object)
+from api.databases.registry.registry_selector import get_registry
+
+from api.databases.redis_db import (check_key_existence, delete_object,
+                                    get_object, store_object)
 from api.settings import APP_SETTINGS
-from api.recommender.exceptions import NoneProjects
+from api.exceptions import NoneProjects
 
 
 def get_projects_services(db):
@@ -24,7 +25,7 @@ def get_projects_services(db):
 
 
 def create_association_rules():
-    db = RSMongoDB()
+    db = get_registry()
     projects_services = get_projects_services(db)
 
     if len(projects_services) == 0:

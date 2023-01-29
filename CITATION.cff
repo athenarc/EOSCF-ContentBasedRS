@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: EOSCF-Content-Based-RS
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Mike
+    family-names: Xydas
+    email: mxydas@athenarc.gr
+    affiliation: Athena R.C.
+    orcid: 'https://orcid.org/0000-0002-8057-7023'
+  - given-names: Anna
+    family-names: Mitsopoulou
+    email: anna.mitsopoulou@athenarc.gr
+    affiliation: Athena R.C.
+  - given-names: Katerina
+    family-names: Xagorari
+    email: katexagorari@athenarc.gr
+    affiliation: Athena R.C.
+  - given-names: Georgia
+    family-names: Koutrika
+    email: georgia@athenarc.gr
+    affiliation: Athena R.C.
+license: GPL-3.0

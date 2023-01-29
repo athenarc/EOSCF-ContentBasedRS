@@ -1,0 +1,54 @@
+version: "3.5"
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: content_based_rs_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: $CONTENT_BASED_RS_MONGO_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD: $CONTENT_BASED_RS_MONGO_PASSWORD
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    volumes:
+      - type: volume
+        source: EOSC_RS_CONTENT_BASED_RS_MONGO_DATA
+        target: /data/db
+      - type: volume
+        source: EOSC_RS_CONTENT_BASED_RS_MONGO_CONFIG
+        target: /data/configdb
+
+  redis:
+    image: redis:6.2-alpine
+    command: redis-server --save 20 1 --loglevel warning --requirepass $INTERNAL_REDIS_PASSWORD
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    volumes:
+      - type: volume
+        source: EOSCF_RS_INTERNAL_REDIS_DATA
+        target: /data
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-rs
+    container_name: recommendation-system-app
+    ports:
+      - "0.0.0.0:4559:4559"
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    depends_on:
+      - mongo
+      - redis
+
+
+networks:
+  EOSC_RECOMMENDATION_SYSTEM_APP:
+    name: EOSC_RECOMMENDATION_SYSTEM_APP
+
+volumes:
+  EOSC_RS_CONTENT_BASED_RS_MONGO_DATA:
+    name: EOSC_RS_CONTENT_BASED_RS_MONGO_DATA
+  EOSC_RS_CONTENT_BASED_RS_MONGO_CONFIG:
+    name: EOSC_RS_CONTENT_BASED_RS_MONGO_CONFIG
+  EOSCF_RS_REDIS_DATA:
+    name: EOSCF_RS_REDIS_DATA

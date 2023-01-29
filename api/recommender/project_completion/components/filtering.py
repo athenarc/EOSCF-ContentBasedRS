@@ -1,7 +1,6 @@
 import logging
 
-
-from api.databases.mongo import RSMongoDB
+from api.databases.registry.registry_selector import get_registry
 
 logger = logging.getLogger(__name__)
 
@@ -14,7 +13,7 @@ def filtering(candidate_resources):
 
     # Get the information of each candidate resource
     resources_ids = [candidate["service_id"] for candidate in candidate_resources]
-    db = RSMongoDB()
+    db = get_registry()
     resources_info = db.get_services(attributes=['status'], conditions={'_id': {'$in': resources_ids}})
 
     # Filter non-published resources

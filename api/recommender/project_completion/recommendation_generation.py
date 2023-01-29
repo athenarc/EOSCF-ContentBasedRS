@@ -1,9 +1,9 @@
 import logging
 
-from api.databases.mongo import RSMongoDB
+from api.databases.registry.registry_selector import get_registry
 from api.recommender.project_completion.components.recommendation_cadidates import \
     get_recommendation_candidates
-from api.recommender.exceptions import IdNotExists
+from api.exceptions import IdNotExists
 
 logger = logging.getLogger(__name__)
 
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def create_recommendation(project_id, recommendations_num=5):
 
     # Get viewed project's services
-    db = RSMongoDB()
+    db = get_registry()
 
     if not db.is_valid_project(project_id):
         raise IdNotExists("Project id does not exist.")

@@ -3,17 +3,26 @@ from typing import List
 
 from api.recommender.project_completion.recommendation_generation import \
     create_recommendation as project_completion_recommendation
+from api.settings import APP_SETTINGS
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, validator
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter()
+router = APIRouter(prefix='/v1')
+
+STATIC_SHORT_EXPLANATION = "Similar projects frequently added this service."
+STATIC_EXPLANATION = "This service was added to other projects that had part of the services that you have added to " \
+                     "this project."
 
 
-class Recommendation(BaseModel):
-    service_id: int
-    score: float
+class RecommendationSet(BaseModel):
+    panel_id: str
+    recommendations: List[int]
+    explanations: List[str]
+    explanations_short: List[str]
+    score: List[float]
+    engine_version: str
 
 
 class ProjectCompletionRecommendationParameters(BaseModel):
@@ -32,8 +41,16 @@ class ProjectCompletionRecommendationParameters(BaseModel):
             raise ValueError('Number of recommendations must be in the range of 1 to 20')
         return v
 
+    class Config:
+        schema_extra = {
+            "example": {
+                "project_id": 1,
+                "num": 5
+            }
+        }
 
-@router.post("/project_completion/recommendation", response_model=List[Recommendation])
+
+@router.post("/project_completion/recommendation", response_model=RecommendationSet, tags=["recommendations"])
 def get_project_completion_recommendation(recommendation_parameters: ProjectCompletionRecommendationParameters):
     """
     **Suggest a completion for the project**
@@ -48,11 +65,18 @@ def get_project_completion_recommendation(recommendation_parameters: ProjectComp
     frequent item sets.
     """
     try:
-        return [Recommendation(service_id=recommendation["service_id"], score=recommendation["score"])
-                for recommendation in
-                project_completion_recommendation(project_id=recommendation_parameters.project_id,
-                                                  recommendations_num=recommendation_parameters.num)
-                ]
+        services_of_similar_projects = project_completion_recommendation(
+            project_id=recommendation_parameters.project_id,
+            recommendations_num=recommendation_parameters.num)
+
+        return RecommendationSet(
+            panel_id="project_completion",
+            recommendations=[service['service_id'] for service in services_of_similar_projects],
+            score=[service['score'] for service in services_of_similar_projects],
+            explanations=[STATIC_EXPLANATION for _ in services_of_similar_projects],
+            explanations_short=[STATIC_SHORT_EXPLANATION for _ in services_of_similar_projects],
+            engine_version=APP_SETTINGS["BACKEND"]["VERSION_NAME"]
+        )
     except Exception as e:
         logger.error("Failed to create recommendation: " + str(e))
         raise HTTPException(status_code=404, detail="Failed to create a recommendation: " + str(e))

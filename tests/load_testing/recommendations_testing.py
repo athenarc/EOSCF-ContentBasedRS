@@ -21,28 +21,43 @@ class BrowsingServicesUser(HttpUser):
             try:
                 if response.status_code == 500:
                     response.failure("Internal server error")
-                elif response.json() != [
-                    {
-                        "service_id": 3,
-                        "score": 0.5168381140137174
-                    },
-                    {
-                        "service_id": 2,
-                        "score": 0.48237195514438336
-                    },
-                    {
-                        "service_id": 57,
-                        "score": 0.40898855358687314
-                    },
-                    {
-                        "service_id": 177,
-                        "score": 0.40001248730878636
-                    },
-                    {
-                        "service_id": 42,
-                        "score": 0.3981655988957545
-                    }
-                ]:
+                elif response.json() != {
+                    "panel_id": "similar_services",
+                    "recommendations": [
+                        3,
+                        2,
+                        57,
+                        177,
+                        42
+                    ],
+                    "explanations": [
+                        "Based on the metadata and the text attributes we retrieve the services "
+                        "that are most similar to the one you are currently viewing.",
+                        "Based on the metadata and the text attributes we retrieve the services "
+                        "that are most similar to the one you are currently viewing.",
+                        "Based on the metadata and the text attributes we retrieve the services "
+                        "that are most similar to the one you are currently viewing.",
+                        "Based on the metadata and the text attributes we retrieve the services "
+                        "that are most similar to the one you are currently viewing.",
+                        "Based on the metadata and the text attributes we retrieve the services "
+                        "that are most similar to the one you are currently viewing."
+                    ],
+                    "explanations_short": [
+                        "Similar metadata and text to the service you are viewing",
+                        "Similar metadata and text to the service you are viewing",
+                        "Similar metadata and text to the service you are viewing",
+                        "Similar metadata and text to the service you are viewing",
+                        "Similar metadata and text to the service you are viewing"
+                    ],
+                    "score": [
+                        0.5168381140137174,
+                        0.48237195514438336,
+                        0.40898855358687314,
+                        0.40001248730878636,
+                        0.3981655988957545
+                    ],
+                    "engine_version": "v1"
+                }:
                     response.failure("Did not get expected recommended services")
             except JSONDecodeError:
                 # response.failure(f"Response \"{response}\" could not be decoded as JSON")
@@ -66,7 +81,14 @@ class ProjectEditingUser(HttpUser):
             try:
                 if response.status_code == 500:
                     response.failure("Internal server error")
-                elif response.json():
+                elif response.json() != {
+                    "panel_id": "project_completion",
+                    "recommendations": [],
+                    "explanations": [],
+                    "explanations_short": [],
+                    "score": [],
+                    "engine_version": "v1"
+                }:
                     response.failure("Did not get expected recommended services")
             except JSONDecodeError:
                 response.failure("Response could not be decoded as JSON")

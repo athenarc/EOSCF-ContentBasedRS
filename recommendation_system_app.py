@@ -1,4 +1,4 @@
-from api.main import start_app
+from app.main import start_app
 
 
 def main():

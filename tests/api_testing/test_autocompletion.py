@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-BASE_URL = "http://0.0.0.0:4560/v1"
+BASE_URL = "http://0.0.0.0:4559/v1"
 
 
 @pytest.mark.api

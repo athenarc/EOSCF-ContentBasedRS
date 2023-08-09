@@ -1,0 +1,104 @@
+[
+  {
+    "data": {
+      "name": "EGI Compute",
+      "tagline": "EGI Compute is a service.",
+      "description": "EGI Compute is a service that provides access to a large number of computing resources across Europe and worldwide. It is based on the EGI Federated Cloud, a cloud federation infrastructure built around open standards and focusing on the requirements of the scientific community.",
+      "scientific_domains": "All scientific domains",
+      "categories": "Cloud",
+      "diversities": [0, 25, 100, 50, 75],
+      "set1": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set2": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set3": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set4": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set5": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "variants": [
+        { "value": "Set 1"},
+        { "value": "Set 2"},
+        { "value": "Set 3"},
+        { "value": "Set 4"},
+        { "value": "Set 5"}
+      ]
+    }
+  },
+  {
+    "data": {
+      "name": "EGI Compute",
+      "tagline": "EGI Compute is a service.",
+      "description": "EGI Compute is a service that provides access to a large number of computing resources across Europe and worldwide. It is based on the EGI Federated Cloud, a cloud federation infrastructure built around open standards and focusing on the requirements of the scientific community.",
+      "scientific_domains": "All scientific domains",
+      "categories": "Cloud",
+      "diversities": [25, 0, 100],
+      "set1": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set2": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set3": {
+          "Service1": "Tagline for service",
+          "Service2": "Tagline for service",
+          "Service3": "Tagline for service",
+          "Service4": "Tagline for service",
+          "Service5": "Tagline for service",
+          "Service6": "Tagline for service"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "variants": [
+        { "value": "Set 1"},
+        { "value": "Set 2"},
+        { "value": "Set 3"}
+      ]
+    }
+  }
+]

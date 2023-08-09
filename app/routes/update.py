@@ -1,7 +1,7 @@
 import logging
 
 from app.exceptions import IdNotExists, NoneProjects, NoneServices
-from app.recommender.update.updater_selector import get_updater
+from app.recommenders.update.updater_selector import get_updater
 from fastapi import APIRouter, HTTPException
 
 logger = logging.getLogger(__name__)

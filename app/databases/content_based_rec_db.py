@@ -40,12 +40,12 @@ class ContentBasedRecsMongoDB:
             logger.error(error)
             return error
 
-    def save_recommendation(self, recommendation, user_id, service_id, history_service_ids):
+    def save_recommendation_set(self, recommendation_set, user_id, service_id, history_service_ids):
         document = {
             "date": datetime.datetime.utcnow(),
             "version": APP_SETTINGS["BACKEND"]["VERSION_NAME"],
             "service_id": service_id,
-            "recommendation": recommendation,
+            "recommendation": recommendation_set,
             "user_id": int(user_id) if user_id is not None else None,
             "history_service_ids": history_service_ids
         }

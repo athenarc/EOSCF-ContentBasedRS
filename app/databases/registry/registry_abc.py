@@ -2,53 +2,106 @@ from abc import ABC, abstractmethod
 
 
 class Registry(ABC):
+    @abstractmethod
     def get_services_by_ids(self, ids, **kwargs):
-        return []
+        pass
 
+    @abstractmethod
     def get_services(self, **kwargs):
-        return []
+        pass
 
+    @abstractmethod
     def get_non_published_services(self):
-        return []
+        pass
 
+    @abstractmethod
     def get_service(self, service_id, **kwargs):
-        return None
+        pass
 
+    @abstractmethod
     def get_projects(self):
-        return []
+        pass
 
+    @abstractmethod
     def get_project(self, project_id):
-        return None
+        pass
 
+    @abstractmethod
     def get_project_services(self, project_id):
-        return []
+        pass
 
+    @abstractmethod
     def get_users(self, **kwargs):
-        return []
+        pass
 
+    @abstractmethod
     def get_user_services(self, user_id):
-        return []
+        pass
 
+    @abstractmethod
     def get_scientific_domains(self):
-        return []
+        pass
 
+    @abstractmethod
+    def get_scientific_subdomains_id_and_name(self):
+        pass
+
+    @abstractmethod
+    def get_scientific_upper_domains_id_and_name(self):
+        pass
+
+    @abstractmethod
+    def get_specific_scientific_domain_name(self, scientific_domain_id):
+        pass
+
+    @abstractmethod
     def get_categories(self):
-        return []
+        pass
 
+    @abstractmethod
+    def get_subcategories_id_and_name(self):
+        pass
+
+    @abstractmethod
+    def get_upper_categories_id_and_name(self):
+        pass
+
+    @abstractmethod
+    def get_specific_category_name(self, category_id):
+        pass
+
+    @abstractmethod
     def get_target_users(self):
-        return []
+        pass
 
+    @abstractmethod
+    def get_target_users_id_and_name(self):
+        pass
+
+    @abstractmethod
+    def get_providers_names(self):
+        pass
+
+    @abstractmethod
     def _remove_general_attributes_from_services(self, services):
-        return []
+        pass
 
+    @abstractmethod
     def _remove_general_attributes_from_single_service(self, service):
-        return None
+        pass
 
+    @abstractmethod
     def is_valid_service(self, service_id):
-        return False
+        pass
 
+    @abstractmethod
     def is_valid_project(self, project_id):
-        return False
+        pass
 
+    @abstractmethod
     def is_valid_user(self, user_id):
-        return False
+        pass
+
+    @abstractmethod
+    def get_catalog_id_mappings(self):
+        pass

@@ -1,6 +1,6 @@
 import logging
 
-from app.health.monitor_health import service_health_test
+from app.health.health_checks import service_health_test
 from fastapi import APIRouter
 
 logger = logging.getLogger(__name__)

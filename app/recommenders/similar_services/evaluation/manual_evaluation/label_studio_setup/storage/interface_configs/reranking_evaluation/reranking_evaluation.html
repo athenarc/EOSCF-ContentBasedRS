@@ -1,0 +1,66 @@
+<View>
+   <Style> .grid-container &gt; div {text-align: center; padding: 20px 0; font-size: 30px; } </Style>
+
+  	<View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; margin-bottom: 2em; border-radius: 5px;">
+      <Header value="Name"/>
+      <Text name="name" value="$name"/>
+
+      <Header value="Tagline"/>
+      <Text name="tagline" value="$tagline"/>
+
+      <Header value="Description"/>
+      <Text name="description" value="$description"/>
+
+      <Header value="Scientific Domains"/>
+      <Text name="scientific_domains" value="$scientific_domains"/>
+
+      <Header value="Categories"/>
+      <Text name="categories" value="$categories"/>
+  </View>
+
+  <Header value="Recommendation Sets"/>
+
+  <View className="grid-container" style="display: grid; grid-template-areas: 'top1 top2' 'mid1 mid2' 'bot1 bot2 '; grid-gap: 10px; padding: 10px;">
+
+      <View style="grid-area: top1; padding: 10px; ">
+         <View style="font-weight: bold; margin-left: 45%; margin-bottom:5px;">
+          <Text name="p4" value="Set 1 "/>
+         </View>
+        <Table name="set-1" value="$set1"/>
+
+      </View>
+
+      <View style="grid-area: top2; padding: 10px">
+        <View style="font-weight: bold; margin-left: 45%; margin-bottom:5px;">
+          <Text name="p5" value="Set 2 "/>
+         </View>
+        <Table name="set-2" value="$set2"/>
+      </View>
+
+      <View style="grid-area: mid1; padding: 10px">
+        <View style="font-weight: bold; margin-left: 45%; margin-bottom:5px;">
+          <Text name="p6" value="Set 3 "/>
+         </View>
+        <Table name="set-3" value="$set3"/>
+      </View>
+
+      <View style="grid-area: mid2; padding: 10px">
+        <View style="font-weight: bold; margin-left: 45%; margin-bottom:5px;">
+          <Text name="p7" value="Set 4 "/>
+         </View>
+        <Table name="set-4" value="$set4"/>
+      </View>
+
+      <View style="grid-area: bot1; padding: 10px">
+        <View style="font-weight: bold; margin-left: 45%; margin-bottom:5px;">
+          <Text name="p8" value="Set 5 "/>
+         </View>
+        <Table name="set-5" value="$set5"/>
+      </View>
+
+	</View>
+
+  <Header value="Choose the most interesting set"/>
+  <Choices name="set_choice" toName="name" value="$variants"/>
+
+</View>

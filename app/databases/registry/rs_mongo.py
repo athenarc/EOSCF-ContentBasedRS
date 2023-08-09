@@ -5,6 +5,7 @@ import pandas as pd
 from app.databases.registry.registry_abc import Registry
 from app.databases.utils.mongo_connector import (MongoDbConnector,
                                                  form_mongo_url)
+from app.exceptions import IdNotExists, RegistryMethodNotImplemented
 from app.settings import APP_SETTINGS
 from pymongo.errors import ServerSelectionTimeoutError
 
@@ -13,6 +14,9 @@ logger = logging.getLogger(__name__)
 
 class RSMongoDB(Registry):
     def __init__(self):
+
+        super().__init__()
+
         self.mongo_connector = MongoDbConnector(
             uri=form_mongo_url(
                 APP_SETTINGS["CREDENTIALS"]['RS_MONGO_USERNAME'],
@@ -43,11 +47,12 @@ class RSMongoDB(Registry):
 
         return f"Collections {' '.join(missing_collections)} are missing" if len(missing_collections) != 0 else None
 
-    def get_services_by_ids(self, ids, attributes=None):
-        return self.get_services(attributes=attributes, conditions={'_id': {'$in': ids}})
+    def get_services_by_ids(self, ids, attributes=None, remove_generic_attributes=False):
+        return self.get_services(attributes=attributes, conditions={'_id': {'$in': ids}},
+                                 remove_generic_attributes=remove_generic_attributes)
 
     # TODO get only attributes?
-    def get_services(self, attributes=None, conditions=None):
+    def get_services(self, attributes=None, conditions=None, remove_generic_attributes=True):
         if conditions is None:
             conditions = {}
         if attributes is None:
@@ -61,19 +66,21 @@ class RSMongoDB(Registry):
         else:  # If there are no services
             services_df = pd.DataFrame(columns=list(set(["service_id"] + attributes)))
 
-        self._remove_general_attributes_from_services(services_df)
+        if remove_generic_attributes:
+            self._remove_general_attributes_from_services(services_df)
 
         return services_df
 
     def get_non_published_services(self, considered_services=None):
         conditions = {"status": {"$ne": "published"}}
         if considered_services is not None:
-            conditions["_id"]  = {'$in': considered_services}
+            conditions["_id"] = {'$in': considered_services}
         return list(self.get_services(conditions=conditions)["service_id"].to_list())
 
-    def get_service(self, service_id):
+    def get_service(self, service_id, remove_generic_attributes=True):
         service = self.mongo_connector.get_db()["service"].find_one({'_id': int(service_id)})
-        self._remove_general_attributes_from_single_service(service)
+        if remove_generic_attributes:
+            self._remove_general_attributes_from_single_service(service)
         return service
 
     def get_project(self, project_id):
@@ -82,11 +89,47 @@ class RSMongoDB(Registry):
     def get_scientific_domains(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["scientific_domain"].find({}, {"_id": 1})]
 
+    def get_scientific_subdomains_id_and_name(self):
+        return [(domain["_id"], domain["name"])
+                for domain in self.mongo_connector.get_db()["scientific_domain"].find({}, {"name": 1})]
+
+    def get_scientific_upper_domains_id_and_name(self):
+        return []
+
+    def get_specific_scientific_domain_name(self, scientific_domain_id):
+        res = self.mongo_connector.get_db()["scientific_domain"].find_one({"_id": scientific_domain_id}, {"name": 1})
+        if res is not None:
+            return res["name"]
+        else:
+            raise IdNotExists(f"Scientific domain id {scientific_domain_id} does not exist!")
+
     def get_categories(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["category"].find({}, {"_id": 1})]
 
+    def get_subcategories_id_and_name(self):
+        return [(domain["_id"], domain["name"])
+                for domain in self.mongo_connector.get_db()["category"].find({}, {"name": 1})]
+
+    def get_upper_categories_id_and_name(self):
+        return []
+
+    def get_specific_category_name(self, category_id):
+        res = self.mongo_connector.get_db()["category"].find_one({"_id": category_id}, {"name": 1})
+        if res is not None:
+            return res["name"]
+        else:
+            raise IdNotExists(f"Category id {category_id} does not exist!")
+
     def get_target_users(self):
         return [domain["_id"] for domain in self.mongo_connector.get_db()["target_user"].find({}, {"_id": 1})]
+
+    def get_target_users_id_and_name(self):
+        return [(domain["_id"], domain["name"])
+                for domain in self.mongo_connector.get_db()["target_user"].find({}, {"name": 1})]
+
+    def get_providers_names(self):
+        return [provider["name"] for provider in self.mongo_connector.get_db()["provider"].find(
+            {}, {"name": 1})]
 
     def _get_general_attribute_ids(self):
         return {
@@ -146,3 +189,10 @@ class RSMongoDB(Registry):
 
     def is_valid_project(self, project_id):
         return self.get_project(project_id) is not None
+
+    def get_catalog_id_mappings(self):
+        mappings = [doc for doc in self.mongo_connector.get_db()['service'].find({}, {'_id': 1, 'pid': 1})]
+        mappings_df = pd.DataFrame(mappings)
+        mappings_df.rename(columns={'pid': 'catalog_id'}, inplace=True)
+        mappings_df.rename(columns={'_id': 'id'}, inplace=True)
+        return mappings_df

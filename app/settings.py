@@ -1,8 +1,18 @@
 import argparse
 
+import spacy
 import yaml
+from app.exceptions import ModeDoesNotExist, NoTextAttributes
 from dotenv import dotenv_values
 from sentence_transformers import SentenceTransformer
+
+from app.recommenders.algorithms.text_processing.text_processing import TextProcessor
+
+VALID_MODES = [
+    'PORTAL-RECOMMENDER',
+    'PROVIDERS-RECOMMENDER',
+    'SIMILAR_SERVICES_EVALUATION'
+]
 
 
 def load_sbert_model(sbert_settings):
@@ -10,7 +20,6 @@ def load_sbert_model(sbert_settings):
     model._model_card_vars["name"] = sbert_settings["MODEL_NAME"]
 
     return model
-
 
 def read_settings(config_path=None):
     if config_path is None:
@@ -37,6 +46,9 @@ def read_settings(config_path=None):
     backend_settings["SIMILAR_SERVICES"]["SBERT"]["MODEL"] = \
         load_sbert_model(backend_settings["SIMILAR_SERVICES"]["SBERT"])
 
+    backend_settings["TEXT_PROCESSOR"] = TextProcessor(backend_settings["SPACY_MODEL"])
+    backend_settings.pop("SPACY_MODEL")
+
     return {
         'BACKEND': backend_settings,
         'CREDENTIALS': credentials,
@@ -50,6 +62,32 @@ def update_backend_settings(config_path):
     APP_SETTINGS['BACKEND'] = backend_settings
     APP_SETTINGS['BACKEND']["SIMILAR_SERVICES"]["SBERT"]["MODEL"] = \
         load_sbert_model(backend_settings["SIMILAR_SERVICES"]["SBERT"])
+
+    backend_settings["TEXT_PROCESSOR"] = TextProcessor(backend_settings["SPACY_MODEL"])
+    backend_settings.pop("SPACY_MODEL")
+
+
+def settings_validation():
+    """
+    Iterates over define validation methods that have to raise an exception if something went wrong
+    """
+    validators = [mode_setting_validation,
+                  empty_text_attributes_validation]
+    for validator in validators:
+        validator()
+
+
+def mode_setting_validation():
+    if APP_SETTINGS['BACKEND']['MODE'] not in VALID_MODES:
+        raise ModeDoesNotExist(f"FATAL: Mode {APP_SETTINGS['BACKEND']['MODE']} is not valid. Check your config file. "
+                               f"Available modes: {VALID_MODES}")
+
+
+def empty_text_attributes_validation():
+    if APP_SETTINGS['BACKEND']['MODE'] == 'PROVIDERS-RECOMMENDER' \
+            and len(APP_SETTINGS['BACKEND']['SIMILAR_SERVICES']['TEXT_ATTRIBUTES']) == 0:
+        raise NoTextAttributes(f"FATAL: Mode {APP_SETTINGS['BACKEND']['MODE']} cannot run with empty "
+                               f"text attributes in the config.")
 
 
 APP_SETTINGS = read_settings()

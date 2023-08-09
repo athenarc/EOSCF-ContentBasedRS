@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
-
 import pandas as pd
 import requests
-from app.databases.redis_db import store_object
+
+from app.databases.registry.registry_selector import get_registry
 from app.settings import APP_SETTINGS
 
 
@@ -11,6 +11,7 @@ class ArgoMonitoringApi:
         self.headers = {'Accept': 'application/json',
                         'x-api-key': APP_SETTINGS['CREDENTIALS']['MONITORING_API_ACCESS_TOKEN']}
         self.N_DAYS_AGO = n_days_ago
+        self.unhealthy_statuses = ['CRITICAL', 'DOWNTIME']
 
     def get_status_report(self):
         """Get the latest status report from monitoring services
@@ -22,16 +23,32 @@ class ArgoMonitoringApi:
                         f"?latest=true"
 
         response = requests.get(status_report, headers=self.headers)
-
+        if response.status_code != 200:
+            return None
         status_report_df = pd.json_normalize(response.json()['groups'])
 
         for i, statuses in enumerate(status_report_df['statuses']):
-            tmp_statuses = []
-            for status in statuses:
-                tmp_statuses.append(status['value'])
-            status_report_df['statuses'][i] = tmp_statuses
+            status_report_df['statuses'][i] = statuses[-1]['value']
 
-        return status_report_df
+        for i, service in enumerate(status_report_df['endpoints']):
+            catalog_id = service[0]['info']['ID']
+            status_report_df['name'][i] = catalog_id
+
+        status_report_df.rename(columns={"name": "catalog_id", "statuses": "status"}, inplace=True)
+        status_report_df = status_report_df.drop(columns=['type', 'endpoints'])
+
+        registry = get_registry()
+        catalog_id_mappings = registry.get_catalog_id_mappings()
+        for i, service in enumerate(status_report_df['catalog_id']):
+            if service in catalog_id_mappings['catalog_id'].unique():
+                status_report_df['catalog_id'][i] = \
+                    catalog_id_mappings.loc[catalog_id_mappings['catalog_id'] == service, 'id'].iloc[0]
+            else:
+                status_report_df['catalog_id'][i] = pd.NA
+        status_report_df.dropna(inplace=True)
+        unhealthy_services = status_report_df.loc[status_report_df['status'].isin(self.unhealthy_statuses)]
+
+        return list(unhealthy_services['catalog_id'])
 
     def get_ar_report(self):
         """Get availability and reliability reports from monitoring services
@@ -47,8 +64,6 @@ class ArgoMonitoringApi:
                 'end_year': '2022',
                 'granularity': 'daily'
             }
-        Args:
-            store_in_redis (bool): Default TRUE
 
         Returns:
             ar_report_df (dataframe): response from api
@@ -67,6 +82,8 @@ class ArgoMonitoringApi:
                     f"&granularity=daily"
 
         response = requests.get(ar_report, headers=self.headers)
+        if response.status_code != 200:
+            return None
 
         results_json = response.json()['results']
         results_dict = {

@@ -28,9 +28,12 @@ def check_health() -> Optional[str]:
     return None
 
 
-def store_object(df, structure_type):
-    df_compressed = zlib.compress(pickle.dumps(df))
-    res = redis_server.set(structure_type, df_compressed)
+def store_object(obj, structure_type, expire_seconds=0):
+    obj_compressed = zlib.compress(pickle.dumps(obj))
+    res = redis_server.set(structure_type, obj_compressed)
+
+    if expire_seconds > 0:
+        redis_server.expire(structure_type, expire_seconds)
 
     if not res:
         raise redis.DataError(f"Failed to store dataframe of {structure_type}")

@@ -1,10 +1,9 @@
 import logging
 from typing import Any, List
 
-from app.recommender.similar_services.service_recommendation.recommendation_generation import \
-    IdNotExists
-from app.recommender.similar_services.service_recommendation.recommendation_generation import \
-    create_recommendation as similar_services_recommendation
+from app.exceptions import IdNotExists
+from app.recommenders.similar_services.recommendation_set_generation import \
+    create_recommendation_set as similar_services_recommendation
 from app.settings import APP_SETTINGS
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, validator
@@ -75,9 +74,11 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
     """
     try:
         most_similar_services = similar_services_recommendation(
-            viewed_resource_id=recommendation_parameters.service_id,
+            viewed_service_id=recommendation_parameters.service_id,
             recommendations_num=recommendation_parameters.num,
-            user_id=recommendation_parameters.user_id)
+            user_id=recommendation_parameters.user_id,
+            do_rerank=False
+        )
 
         return RecommendationSet(
             panel_id="similar_services",

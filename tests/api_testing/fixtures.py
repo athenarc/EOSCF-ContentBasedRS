@@ -41,7 +41,7 @@ def registered_user_rs_mongo():
                     0.5011148838074491,
                     0.42334997116232737
                 ],
-                "engine_version": "v1"
+                "engine_version": "v3"
             }
     }
 
@@ -85,7 +85,7 @@ def anonymous_user_rs_mongo():
                     0.5240613371576649,
                     0.4315552520485839
                 ],
-                "engine_version": "v1"
+                "engine_version": "v3"
             }
     }
 
@@ -105,7 +105,7 @@ def completed_project_empty():
                 "explanations": [],
                 "explanations_short": [],
                 "score": [],
-                "engine_version": "v1"
+                "engine_version": "v3"
             }
     }
 
@@ -116,7 +116,7 @@ def onboarded_service():
         "request":
             {
                 "new_service": {
-                    "name": "Compute compute compute",
+                    "tagline": "Compute compute compute",
                     "description": "Cloud compute cloud storage compute compute Compute compute compute"
                 },
                 "fields_to_suggest": [
@@ -153,12 +153,13 @@ def onboarded_service():
             ]
     }
 
+
 @pytest.fixture
 def project_assistant():
     return {
         "request":
             {
-              "description": "I want a service to visualize my data",
+              "prompt": "I want a service to visualize my data",
               "max_num": 5
             },
         "expected_response":
@@ -188,7 +189,6 @@ def project_assistant():
                     0.5079697370529175,
                     0.5075398683547974
                 ],
-                "engine_version": "v1"
+                "engine_version": "v3"
             }
     }
-

@@ -1,8 +1,8 @@
 import logging
 from typing import List
 
-from app.recommender.project_completion.recommendation_generation import \
-    create_recommendation as project_completion_recommendation
+from app.recommenders.project_completion.recommendation_set_generation import \
+    create_recommendation_set as project_completion_recommendation
 from app.settings import APP_SETTINGS
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, validator

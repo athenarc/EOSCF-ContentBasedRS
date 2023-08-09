@@ -1,0 +1,8 @@
+ ,config                                                                                                                                                                  ,coverage
+0,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_SD.yaml     ,0.4244791666666667
+1,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_C+SD.yaml   ,0.9088541666666666
+2,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_C+SD+TU.yaml,0.9088541666666666
+3,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_SD+TU.yaml  ,0.8802083333333334
+4,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_TU.yaml     ,0.7604166666666666
+5,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_C.yaml      ,0.8333333333333334
+6,app/recommender/similar_services/service_recommendation/evaluation/manual_evaluation/recommender_version_distances/configs/best_metadata_attributes/version_C+TU.yaml   ,0.8958333333333334

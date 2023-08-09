@@ -1,7 +1,7 @@
 import logging
 from typing import List
 
-from app.recommender.similar_services.project_assistant.recommendation_generation import \
+from app.recommenders.project_assistant.recommendation_generation import \
     project_assistant_recommendation
 from app.settings import APP_SETTINGS
 from fastapi import APIRouter
@@ -25,7 +25,7 @@ class RecommendationSet(BaseModel):
 
 
 class ProjectAssistantRecommendationParameters(BaseModel):
-    description: str
+    prompt: str
     max_num: int = 5
 
     @validator('max_num')
@@ -37,7 +37,7 @@ class ProjectAssistantRecommendationParameters(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "description": "I want a service to visualize my data",
+                "prompt": "I want a service to visualize my data",
                 "max_num": 5
             }
         }
@@ -51,7 +51,7 @@ class ProjectAssistantRecommendationParameters(BaseModel):
 def get_project_assistant_recommendation(recommendation_parameters: ProjectAssistantRecommendationParameters):
 
     most_similar_services = project_assistant_recommendation(
-        description=recommendation_parameters.description,
+        prompt=recommendation_parameters.prompt,
         max_num=recommendation_parameters.max_num
     )
 

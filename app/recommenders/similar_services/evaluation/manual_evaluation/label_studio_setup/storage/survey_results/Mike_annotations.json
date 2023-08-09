@@ -1,0 +1,3562 @@
+[
+  {
+    "id": 1,
+    "annotations": [
+      {
+        "id": 2,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "Swu0zeh4vQ",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T09:59:56.809180Z",
+        "updated_at": "2023-06-19T09:59:56.809203Z",
+        "lead_time": 79.602,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "bf04f610-7d0e-48db-a46c-2533af84198c",
+        "last_action": null,
+        "task": 1,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "openRDM EU",
+      "tagline": "openRDM.eu will provide a complete solution to managing your research data, from the bench till the publication, all across Europe.",
+      "description": "openRDM.eu offers a research data management service to the international research community, focused on active data management. Active research data management (ARDM) is the process of organising data during an ongoing research project (data annotation, storage and backup).\n\nThe service is based around the ARDM platform [openBIS](https:\/\/openbis.ch\/), developed for the last 12 years by the Scientific IT Services of Informatikdienste (ID SIS) at ETH Zurich. openBIS is a server-client application: the remote server hosts the database and storage backends which are accessed by the users from their local machines via a web browser. **openBIS** combines a data management platform with a digital lab notebook and a sample and protocol management system. It enables scientists to meet the ever-increasing requirements from funding agencies, journals, and academic institutions to publish data according to the **FAIR** data principles – according to which data should be Findable, Accessible, Interoperable and Reusable. The system is available in a version specific for life sciences and in a generic version, customizable for other scientific disciplines. ",
+      "scientific_domains": "Generic",
+      "categories": "Digitisation, Maintenance, Software Improvement, Data, Scientific\/Research Data",
+      "set1": {
+        "EGI DataHub": "Access key scientific datasets scalably",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "European Galaxy Server": "Open, reproducible, web-based platform for data intensive research.",
+        "ENES Data Space": "Data science environment for climate data analysis on top of the EOSC Compute Platform",
+        "DataLad - free and open source distributed data management": " distributed system for joint management of code, data, and their relationship",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities"
+      },
+      "set2": {
+        "EGI DataHub": "Access key scientific datasets scalably",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "European Galaxy Server": "Open, reproducible, web-based platform for data intensive research.",
+        "Open Science Training": "Practice Open and FAIR Science",
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "BacDive – The Bacterial Diversity Metadatabase": "BacDive is the worldwide largest database for standardized bacterial information. Its mission is to mobilize and integrate research data on strain level from diverse sources and make it freely accessible."
+      },
+      "set3": {
+        "EGI DataHub": "Access key scientific datasets scalably",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "Open Science Helpdesk": "Access OpenAIRE support resources or ask us a question",
+        "ENES Data Space": "Data science environment for climate data analysis on top of the EOSC Compute Platform",
+        "DataLad - free and open source distributed data management": " distributed system for joint management of code, data, and their relationship",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities"
+      },
+      "set4": {
+        "EGI DataHub": "Access key scientific datasets scalably",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "European Galaxy Server": "Open, reproducible, web-based platform for data intensive research.",
+        "Data Discovery and Access Service": "Seamlessly discovery and access data across several data providers",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "OpenAIRE Graph Access API": "A gateway to open research"
+      },
+      "set5": {
+        "EGI DataHub": "Access key scientific datasets scalably",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "European Galaxy Server": "Open, reproducible, web-based platform for data intensive research.",
+        "Open Science Helpdesk": "Access OpenAIRE support resources or ask us a question",
+        "ENES Data Space": "Data science environment for climate data analysis on top of the EOSC Compute Platform",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities"
+      },
+      "shuffled_diversities": [
+        75,
+        25,
+        100,
+        0,
+        50
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506686Z",
+    "updated_at": "2023-06-19T09:59:56.830806Z",
+    "inner_id": 1,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 2,
+    "annotations": [
+      {
+        "id": 3,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "SzpGkr-Z61",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:01:51.337753Z",
+        "updated_at": "2023-06-19T10:01:51.337785Z",
+        "lead_time": 114.357,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "2429cd79-65df-4105-97d0-74212e1c9e62",
+        "last_action": null,
+        "task": 2,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Identifiers.org",
+      "tagline": "Persistent Identifier (PID) services",
+      "description": "The Identifiers.org system provides a range of services to generate, resolve and validate persistent (PID) and Compact Identifiers, to enable the referencing of scientific data and to promote the citability of individual data provider, enabling integration across e-infrastructures.",
+      "scientific_domains": "Other Medical Sciences",
+      "categories": "Discovery",
+      "set1": {
+        "Open sparql endpoint": "Use this sparql endpoint to query the ICOS metadata repository, using machine to machine direct access",
+        "B2HANDLE": "Register your research data with a persistent identifier",
+        "VAMDC Query Store": "Quickly cite your data in scientific papers",
+        "symbIoTe": "IoT Platforms interoperability framework",
+        "Identifiers.org Resolution Services": "Resolution Service",
+        "OpenEBench": "Produce and choose more efficient methods, tools and web services by comparing their performance to other similar resources in the field of bioinformatics."
+      },
+      "set2": {
+        "Open sparql endpoint": "Use this sparql endpoint to query the ICOS metadata repository, using machine to machine direct access",
+        "Identifiers.org Resolution Services": "Resolution Service",
+        "OpenEBench": "Produce and choose more efficient methods, tools and web services by comparing their performance to other similar resources in the field of bioinformatics.",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "Services for Sensitive Data (TSD)": "Services for sensitive data",
+        "EGI Check-In": "Αccess and use EGI services in a uniform and easy way"
+      },
+      "set3": {
+        "Open sparql endpoint": "Use this sparql endpoint to query the ICOS metadata repository, using machine to machine direct access",
+        "B2HANDLE": "Register your research data with a persistent identifier",
+        "Identifiers.org Resolution Services": "Resolution Service",
+        "OpenEBench": "Produce and choose more efficient methods, tools and web services by comparing their performance to other similar resources in the field of bioinformatics.",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage"
+      },
+      "set4": {
+        "Open sparql endpoint": "Use this sparql endpoint to query the ICOS metadata repository, using machine to machine direct access",
+        "B2HANDLE": "Register your research data with a persistent identifier",
+        "VAMDC Query Store": "Quickly cite your data in scientific papers",
+        "symbIoTe": "IoT Platforms interoperability framework",
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        100,
+        50,
+        0
+      ],
+      "duplicate_pairs": [
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506754Z",
+    "updated_at": "2023-06-19T10:01:51.356015Z",
+    "inner_id": 2,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 3,
+    "annotations": [
+      {
+        "id": 4,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "vnU2EmKuHz",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:05:56.100865Z",
+        "updated_at": "2023-06-19T10:05:56.100885Z",
+        "lead_time": 244.58,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "4ed4d8c8-5da7-4413-84aa-7110fb5aaba5",
+        "last_action": null,
+        "task": 3,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Jelastic Platform-as-a-Service",
+      "tagline": "Multi-Cloud DevOps PaaS",
+      "description": "Jelastic is a Multi-Cloud DevOps PaaS for ISVs, telcos, service providers and enterprises needing to speed up development, reduce cost of IT infrastructure, improve uptime and security. The platform automates creation, scaling, clustering and security updates of cloud-native and traditional applications. Jelastic has a unique pay-as-you-use pricing model and is available as public, private, hybrid and multi-cloud in about 60 data centers worldwide. The platform supports Java, PHP, Ruby, Node.js, Python, .NET, Go environments, as well as Docker and Kubernetes clusters. Features: * Public, Private, Hybrid and Multi-Cloud deployments * Support of microservices and legacy applications with zero code changes * Automated continuous integration, delivery and upgrade processes * More than 50 certified containers out-of-the-box * Managed multi-tenant Kubernetes and Docker containers support * Automatic vertical and horizontal scaling according to applications load * Superb developer web portal for easy provisioning, scaling and updating environments * Open API, CLI and SSH access for deeper containers management * Integration with Git, SVN & Continuous Integration services * Automated replication for application servers and databases * Multi-cloud and multi-region management of workloads distribution and live migration * Comprehensive billing engine, quotas and access control policies * Built-in metering, monitoring and troubleshooting tools Jelastic provides Cloud solutions for data collection and processing of near real time data streams coming from multiple stations operating worldwide under different Earth Observation projects. Such services are relevant for seismic and infrasound monitoring. Jelastic Cloud solutions have flexible capability for cloning and migration of developed applications to different Cloud IaaS for optimal monitoring functionality. Services could be tested for early warning and seismic risk assessment and monitoring. Training services could be provided on request.",
+      "scientific_domains": "Earth & Related Environmental Sciences",
+      "categories": "Other",
+      "set1": {
+        "Open Telekom Cloud": "Simple, secure and affordable European alternative public cloud, based on OpenStack",
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "SeaDataNet Common Data Index (CDI) user interface": "Access oceanographic in-situ data",
+        "SeaDataNet CDI Data Discovery & Access service: SPARQL service for CDI metadata (open data)": "SPARQL endpoint to access SeaDataNets oceanographic in-situ data",
+        "SeaDataNet European Directory of Marine Environmental Research Projects (EDMERP)": "Discover marine research projects",
+        "SeaDataNet CDI Data Discovery & Access service: OGC WMS service for locations of all data sets (open and restricted) ": "Access oceanographic in-situ data"
+      },
+      "set2": {
+        "Open Telekom Cloud": "Simple, secure and affordable European alternative public cloud, based on OpenStack",
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "SeaDataNet CDI Data Discovery & Access service: SPARQL service for CDI metadata (open data)": "SPARQL endpoint to access SeaDataNets oceanographic in-situ data",
+        "Orange Cloud Services - OCRE Flexible Engine": "Flexible Cloud Services for Research and Education",
+        "ENES Climate Analytics Service": "Analyze and process data from multiple communities with the Ophidia Big Data Analytics framework",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford"
+      },
+      "set3": {
+        "Open Telekom Cloud": "Simple, secure and affordable European alternative public cloud, based on OpenStack",
+        "SeaDataNet European Directory of Marine Environmental Research Projects (EDMERP)": "Discover marine research projects",
+        "Orange Cloud Services - OCRE Flexible Engine": "Flexible Cloud Services for Research and Education",
+        "ENES Climate Analytics Service": "Analyze and process data from multiple communities with the Ophidia Big Data Analytics framework",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "Cloudferro Data related Services - EO browser": "The EO Browser allows visualization and basic processing of selected data collections (like Sentinel-1 L1 GRD or Sentinel-2 L1C)"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        25,
+        50
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ],
+        [
+          50,
+          100
+        ],
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506803Z",
+    "updated_at": "2023-06-19T10:05:56.120448Z",
+    "inner_id": 3,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 4,
+    "annotations": [
+      {
+        "id": 5,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "ldK1kftoFW",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:06:28.421968Z",
+        "updated_at": "2023-06-19T10:06:28.422005Z",
+        "lead_time": 32.144,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "c838a14e-a1f5-4b16-b499-ba58363f79bf",
+        "last_action": null,
+        "task": 4,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "GÉANT Lambda",
+      "tagline": "High-performance interconnectivity for the most demanding networking requirements.",
+      "description": "GEANT Lambda provides bandwidth up to 100Gbps to support NREN users with particularly demanding network requirements. The service provides transparent 10Gbps, or 100Gbps ethernet connections between GEANT PoPs. Ideally suited to major international projects, Point-to-Point services offer a high performance networking solution for NRENs and the researchers they support.\n",
+      "scientific_domains": "Generic",
+      "categories": "Virtual Network",
+      "set1": {
+        "GÉANT IP": "Providing high-bandwidth, high-speed international connectivity for millions of academic user​s",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "Timemap": "Open-source Latency\/Jitter Measurement Service",
+        "EGI Data Transfer": "Transfer large sets of data from one place to another",
+        "OCRE Cloud Services by Vancis": "The Managed Cloud Company",
+        "Trusted Certificate Service": "Increasing online security by facilitating the deployment of digital certificates."
+      },
+      "set2": {
+        "GÉANT IP": "Providing high-bandwidth, high-speed international connectivity for millions of academic user​s",
+        "GÉANT L3VPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT Plus": "High-performance interconnectivity for the most demanding networking requirements.",
+        "GÉANT MDVPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT Open": "High-performance interconnectivity for the most demanding networking requirements.",
+        "WiFiMon": "Managing WiFi performance for Research and Education"
+      },
+      "set3": {
+        "GÉANT IP": "Providing high-bandwidth, high-speed international connectivity for millions of academic user​s",
+        "GÉANT L3VPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT Plus": "High-performance interconnectivity for the most demanding networking requirements.",
+        "Timemap": "Open-source Latency\/Jitter Measurement Service",
+        "EGI Data Transfer": "Transfer large sets of data from one place to another",
+        "OCRE Cloud Services by Vancis": "The Managed Cloud Company"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        75,
+        0,
+        50
+      ],
+      "duplicate_pairs": [
+        [
+          0,
+          25
+        ],
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506848Z",
+    "updated_at": "2023-06-19T10:06:28.442718Z",
+    "inner_id": 4,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 5,
+    "annotations": [
+      {
+        "id": 6,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "L3em8T2wuW",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:08:03.840394Z",
+        "updated_at": "2023-06-19T10:08:03.840412Z",
+        "lead_time": 95.226,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "3cc87342-5e22-4965-a495-9b06ee9976b1",
+        "last_action": null,
+        "task": 5,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "SeaDataNet European Directory of the Initial Ocean-Observing Systems (EDIOS)",
+      "tagline": "Discover ocean measuring and monitoring systems",
+      "description": "SeaDataNet is a pan-European distributed marine data infrastructure for the management, exchange and re-use of marine and oceanographic data sets and collections. A major objective and challenge in SeaDataNet is to promote discoverability of these data resources in a consistent and comprehensive manner. This is achieved through the SeaDataNet metadata services a set of directories, with associated user interfaces and web services, each governed by a SeaDataNet partner and content provided through national SeaDataNet collating nodes. The European Directory of Ocean-Observing Systems (EDIOS) is the SeaDataNet catalogue promoting discoverability of, and access to, ocean measuring and monitoring systems operated by European countries. EDIOS is an initiative of the European Global Ocean Observing System (EuroGOOS) and helps to maintain visibility of continuously available data sets for operational modelling purposes and supports implementation of the European Unions Marine Strategy Framework Directive (MSFD). EDIOS presents users with three main tiers of information: monitoring i) programmes, ii) platforms and iii) series\/stations. The catalogue utilises a metadata format based upon the ISO 19115 content model. The EDIOS Schema and XML coding are supported by URLs and URNs to the SeaDataNet Common Vocabularies.For communities who need information about marine monitoring initiatives operated by European countriesMore than 110 data providers (linked to more than 600 data originators) and several thousands of data users",
+      "scientific_domains": "Earth & Related Environmental Sciences",
+      "categories": "Preservation",
+      "set1": {
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet European Directory of Marine Environmental Data (EDMED)": "Discover oceanographic datasets and data collections",
+        "SeaDataNet Vocabulary Services - underpinned by the NERC Vocabulary Server (NVS)": "Standardised markup of data and metadata sets through governed common vocabularies",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "OceanRegimes notebooks": "A notebook for Ocean Regimes",
+        "Oceanographic buoy Vida": "A service for rectifying wind direction with the orientation of an anemometer placed on a floating device."
+      },
+      "set2": {
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet Vocabulary Services - underpinned by the NERC Vocabulary Server (NVS)": "Standardised markup of data and metadata sets through governed common vocabularies",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "Fisheries Atlas VLab": "overview of harmonised time-series of catch and effort accessible through a map Viewer",
+        "OceanRegimes notebooks": "A notebook for Ocean Regimes",
+        "Oceanographic buoy Vida": "A service for rectifying wind direction with the orientation of an anemometer placed on a floating device."
+      },
+      "set3": {
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet Vocabulary Services - underpinned by the NERC Vocabulary Server (NVS)": "Standardised markup of data and metadata sets through governed common vocabularies",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "MEI Generator": "extract new knowledge from our environment",
+        "OceanRegimes notebooks": "A notebook for Ocean Regimes",
+        "Oceanographic buoy Vida": "A service for rectifying wind direction with the orientation of an anemometer placed on a floating device."
+      },
+      "set4": {
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet European Directory of Marine Environmental Data (EDMED)": "Discover oceanographic datasets and data collections",
+        "SeaDataNet CDI Data Discovery & Access service: OGC WMS service for locations of all data sets (open and restricted) ": "Access oceanographic in-situ data",
+        "SeaDataNet Vocabulary Services - underpinned by the NERC Vocabulary Server (NVS)": "Standardised markup of data and metadata sets through governed common vocabularies",
+        "SeaDataNet CDI Data Discovery & Access service: OGC WFS service for metadata features of all data sets (open and restricted) ": "Access oceanographic in-situ data",
+        "SeaDataNet Common Data Index (CDI) user interface": "Access oceanographic in-situ data"
+      },
+      "set5": {
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet European Directory of Marine Environmental Data (EDMED)": "Discover oceanographic datasets and data collections",
+        "SeaDataNet CDI Data Discovery & Access service: OGC WMS service for locations of all data sets (open and restricted) ": "Access oceanographic in-situ data",
+        "SeaDataNet Vocabulary Services - underpinned by the NERC Vocabulary Server (NVS)": "Standardised markup of data and metadata sets through governed common vocabularies",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "Oceanographic buoy Vida": "A service for rectifying wind direction with the orientation of an anemometer placed on a floating device."
+      },
+      "shuffled_diversities": [
+        50,
+        75,
+        100,
+        0,
+        25
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506900Z",
+    "updated_at": "2023-06-19T10:08:03.859970Z",
+    "inner_id": 5,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 6,
+    "annotations": [
+      {
+        "id": 7,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "SAx9aqQF3x",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:09:13.708025Z",
+        "updated_at": "2023-06-19T10:09:13.708043Z",
+        "lead_time": 69.68,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "002a2b03-9ee0-4df7-8b8a-1207d348c1b2",
+        "last_action": null,
+        "task": 6,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "EGI Cloud Compute",
+      "tagline": "Run virtual machines on-demand with complete control over computing resources",
+      "description": "Cloud Compute gives you the ability to deploy and scale virtual machines on-demand. It offers guaranteed computational resources in a secure and isolated environment with standard API access, without the overhead of managing physical servers. Cloud Compute offers the possibility to select pre-configured virtual appliances (e.g. CPU, memory, disk, operating system or software) from a catalogue replicated across all EGI cloud providers. With Cloud Compute you can: Execute compute- and data-intensive workloads (both batch and interactive). Host long-running services (e.g. web servers, databases or applications servers). Create disposable testing and development environments on virtual machines and scale your infrastructure needs. Select virtual machine configurations (CPU, memory, disk) and application environments to fit your requirements. Manage your Cloud Compute resources in a flexible way with integrated monitoring and accounting capabilities.",
+      "scientific_domains": "Generic",
+      "categories": "Virtual Machine Management",
+      "set1": {
+        "SCIGNE Cloud Compute": "Deploy your on-demand IT infrastructure with complete control over computing resources",
+        "OCRE Cloud Services by EXOSCALE": "Cloud Services and More",
+        "Clouds Service": "Enabling Institutions to access virtualised commercial cloud services",
+        "OCRE Cloud Services by IONOS": "The business cloud for your company",
+        "CSIC Cloud": "CSIC Infrastructure as a Service cloud resources",
+        "OCRE Cloud Services by x-ion": "Your safe haven for cloud computing"
+      },
+      "set2": {
+        "SCIGNE Cloud Compute": "Deploy your on-demand IT infrastructure with complete control over computing resources",
+        "OCRE Cloud Services by EXOSCALE": "Cloud Services and More",
+        "Clouds Service": "Enabling Institutions to access virtualised commercial cloud services",
+        "CSIC Cloud": "CSIC Infrastructure as a Service cloud resources",
+        "OCRE Cloud Services by Cloud and Heat": "Managed Cloud Services for R&E",
+        "OCRE Cloud Services by Sentia": "Empower your business to grow"
+      },
+      "set3": {
+        "SCIGNE Cloud Compute": "Deploy your on-demand IT infrastructure with complete control over computing resources",
+        "Clouds Service": "Enabling Institutions to access virtualised commercial cloud services",
+        "CSIC Cloud": "CSIC Infrastructure as a Service cloud resources",
+        "OCRE Cloud Services by Cloud and Heat": "Managed Cloud Services for R&E",
+        "OCRE Cloud Services by T-Systems": "The Open Telekom Cloud: European cloud with a comprehensive portfolio",
+        "OCRE Cloud Services by Sentia": "Empower your business to grow"
+      },
+      "set4": {
+        "SCIGNE Cloud Compute": "Deploy your on-demand IT infrastructure with complete control over computing resources",
+        "OCRE Cloud Services by EXOSCALE": "Cloud Services and More",
+        "Clouds Service": "Enabling Institutions to access virtualised commercial cloud services",
+        "OCRE Cloud Services by IONOS": "The business cloud for your company",
+        "CSIC Cloud": "CSIC Infrastructure as a Service cloud resources",
+        "OCRE Cloud Services by Sentia": "Empower your business to grow"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        75,
+        25
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506945Z",
+    "updated_at": "2023-06-19T10:09:13.728086Z",
+    "inner_id": 6,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 7,
+    "annotations": [
+      {
+        "id": 8,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "e3nw38det_",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:10:16.208684Z",
+        "updated_at": "2023-06-19T10:10:16.208710Z",
+        "lead_time": 62.323,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "4e9cbe26-7842-46a2-9e0f-5aecffb412ad",
+        "last_action": null,
+        "task": 7,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Modelling Service for Water Supply Systems",
+      "tagline": "A web-based, collaborative environment for modeling and analysis of water supply networks",
+      "description": "MSWSS is a web-based service for modeling and analysis of Water Supply Systems which integrates the analysis of toxics in drinking-water supply networks with water distribution network simulation. MSWSS service allows water infrastructure operators and researchers to analyse hazardous events (e.g. toxics propagation within a pipe system) and may be used for preparation of risk management plans for water utilities. The EOSC computing infrastructure and data sharing services enable modelling of more complex water supply systems and increase the number of scenarios for the analysis.",
+      "scientific_domains": "Civil Engineering",
+      "categories": "Platform, Image\/Data Analysis",
+      "set1": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "ATMO-4CAST": "Atmospheric Forecast",
+        "WORSICA - Water Monitoring Sentinel Cloud Platform": "WORSICA is a one-stop-shop portal for the detection of water using satellites, Unmanned Aerial Vehicles, and in-situ data.",
+        "MICS: Measuring the impact of citizen science": "MICS: Measuring the impact of citizen science",
+        "WRiMS Taxon match": "Use WRiMS to automatically match your species list or taxon list.",
+        "MEI Generator": "extract new knowledge from our environment"
+      },
+      "set2": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "AI4GEO Engine": "Collaborative Virtual Research Environment dedicated to Earth Observation and geolocated data",
+        "Trophic Positions Modeler": "Model trophic positions as a function of environmental drivers.",
+        "ATMO-4CAST": "Atmospheric Forecast",
+        "Environmental Data Extractor": "Create a dataset of environmental predictors.",
+        "WORSICA - Water Monitoring Sentinel Cloud Platform": "WORSICA is a one-stop-shop portal for the detection of water using satellites, Unmanned Aerial Vehicles, and in-situ data."
+      },
+      "set3": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "Trophic Positions Modeler": "Model trophic positions as a function of environmental drivers.",
+        "ATMO-4CAST": "Atmospheric Forecast",
+        "WORSICA - Water Monitoring Sentinel Cloud Platform": "WORSICA is a one-stop-shop portal for the detection of water using satellites, Unmanned Aerial Vehicles, and in-situ data.",
+        "MICS: Measuring the impact of citizen science": "MICS: Measuring the impact of citizen science",
+        "WRiMS Taxon match": "Use WRiMS to automatically match your species list or taxon list."
+      },
+      "set4": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "ATMO-4CAST": "Atmospheric Forecast",
+        "WORSICA - Water Monitoring Sentinel Cloud Platform": "WORSICA is a one-stop-shop portal for the detection of water using satellites, Unmanned Aerial Vehicles, and in-situ data.",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser.",
+        "MICS: Measuring the impact of citizen science": "MICS: Measuring the impact of citizen science",
+        "WRiMS Taxon match": "Use WRiMS to automatically match your species list or taxon list."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        75,
+        0,
+        25,
+        50
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.506989Z",
+    "updated_at": "2023-06-19T10:10:16.228120Z",
+    "inner_id": 7,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 8,
+    "annotations": [
+      {
+        "id": 9,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 2"
+              ]
+            },
+            "id": "bKCiTQc030",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:14:24.184811Z",
+        "updated_at": "2023-06-19T10:14:24.184831Z",
+        "lead_time": 247.805,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "1f40e7f4-8d30-4b14-affa-c7264e0bc40b",
+        "last_action": null,
+        "task": 8,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Verbal Aggression Analyser (VA Analyser)",
+      "tagline": "Twitter Verbal Aggression Analysis",
+      "description": "A language technology-based tool designed to detect specific types of verbal attacks (i.e. criticism, swearing, irony, ousting, calls for physical violence) expressed in Twitter against predefined targets of interest (e.g. specific ethnic groups, political actors) for the Greek and the English language. \nThe output of the tool is structured information about the targets and the type of the verbal attacks in Tweets classified as aggressive, providing interesting insights for various stakeholders (e.g. researchers, political and social scientists, journalists, policy makers) interested in monitoring and examining verbal aggression as an aspect of different social phenomena (e.g. xenophobia, political violence).\n",
+      "scientific_domains": "Political Sciences, Other Engineering & Technology Sciences",
+      "categories": "Applications Repository, Data Extrapolation",
+      "set1": {
+        "ELSST – European Language Social Science Thesaurus": "ELSST is CESSDA's multilingual thesaurus for the social sciences, used to facilitate access to data resources across Europe",
+        "TagMe": "Entity Linking tools",
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Language Resource Switchboard": "A web application that suggests language analysis tools for specific data sets.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "KER - Keyword Extractor": "A keyword extractor for Czech and English"
+      },
+      "set2": {
+        "ELSST – European Language Social Science Thesaurus": "ELSST is CESSDA's multilingual thesaurus for the social sciences, used to facilitate access to data resources across Europe",
+        "TagMe": "Entity Linking tools",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Argus": "Alarm Aggregation and Correlation Tool",
+        "OPERAS Research for Society (Hypotheses)": "The research blogging service in SSH to address societal challenges",
+        "robotbenchmark": "Program simulated robots online - Compare your performance to the best - Share your achievements."
+      },
+      "set3": {
+        "ELSST – European Language Social Science Thesaurus": "ELSST is CESSDA's multilingual thesaurus for the social sciences, used to facilitate access to data resources across Europe",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Argus": "Alarm Aggregation and Correlation Tool",
+        "OPERAS Research for Society (Hypotheses)": "The research blogging service in SSH to address societal challenges",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "robotbenchmark": "Program simulated robots online - Compare your performance to the best - Share your achievements."
+      },
+      "set4": {
+        "ELSST – European Language Social Science Thesaurus": "ELSST is CESSDA's multilingual thesaurus for the social sciences, used to facilitate access to data resources across Europe",
+        "TagMe": "Entity Linking tools",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "KER - Keyword Extractor": "A keyword extractor for Czech and English",
+        "Argus": "Alarm Aggregation and Correlation Tool",
+        "robotbenchmark": "Program simulated robots online - Compare your performance to the best - Share your achievements."
+      },
+      "set5": {
+        "ELSST – European Language Social Science Thesaurus": "ELSST is CESSDA's multilingual thesaurus for the social sciences, used to facilitate access to data resources across Europe",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Argus": "Alarm Aggregation and Correlation Tool",
+        "Transkribus": "Handwritten Text Recognition and Keyword Spotting",
+        "robotbenchmark": "Program simulated robots online - Compare your performance to the best - Share your achievements."
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        100,
+        25,
+        75
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507034Z",
+    "updated_at": "2023-06-19T10:14:24.203952Z",
+    "inner_id": 8,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 9,
+    "annotations": [
+      {
+        "id": 10,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "ZPCvvr0chk",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:15:12.192272Z",
+        "updated_at": "2023-06-19T10:15:12.192292Z",
+        "lead_time": 47.829,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "714841b6-acd7-4ce5-b798-9e861f817419",
+        "last_action": null,
+        "task": 9,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "B2ACCESS",
+      "tagline": "Identity & authorisation",
+      "description": "B2ACCESS is a federated cross-infrastructure authorisation and authentication proxy for user identification and community-defined access control enforcement. It allows users to authenticate themselves using a variety of credentials providing federated access and single-sign-on to services and service providers in a trusted way. B2ACCESS offers communities and service providers an AARC compliant AAI proxy ready to be integrated within the EOSC AAI Federation. \n\n**Features**\n\n- Compliant to the AARC Blueprint and REFEDS Sirtfi\n- Supports group management\n- Supports authorisation via group membership\n- Supports authentication e.g. via eduGAIN, ORCID and Social Identities\n- Support for EUDAT B2ACCESS local accounts\n- Support for IdP and service integration via SAML, OAuth and OIDC",
+      "scientific_domains": "Generic",
+      "categories": "User Authentication, Group Management, Identity & Access Management, Single Sign-On",
+      "set1": {
+        "INDIGO Identity and Access Management (IAM) ": "Identity and Access Management Service",
+        "AUTHENIX": "Bringing together Citizen Science and Research",
+        "OpenAIRE Login": "Secure access made easy",
+        "eduTEAMS": "Making managing virtual teams easy",
+        "eduGAIN": "Unlocking global research and education c​​ollaboration.",
+        "eduroam": "Seamless Wi-Fi access for research and education around the world​."
+      },
+      "set2": {
+        "INDIGO Identity and Access Management (IAM) ": "Identity and Access Management Service",
+        "InAcademia": "Online Student Validation",
+        "B2HANDLE": "Register your research data with a persistent identifier",
+        "Chipster": "NGS and microarray analysis in the cloud.",
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart"
+      },
+      "set3": {
+        "INDIGO Identity and Access Management (IAM) ": "Identity and Access Management Service",
+        "AUTHENIX": "Bringing together Citizen Science and Research",
+        "OpenAIRE Login": "Secure access made easy",
+        "eduTEAMS": "Making managing virtual teams easy",
+        "EGI Check-In": "Αccess and use EGI services in a uniform and easy way",
+        "eduGAIN": "Unlocking global research and education c​​ollaboration."
+      },
+      "set4": {
+        "INDIGO Identity and Access Management (IAM) ": "Identity and Access Management Service",
+        "eduGAIN": "Unlocking global research and education c​​ollaboration.",
+        "InAcademia": "Online Student Validation",
+        "B2HANDLE": "Register your research data with a persistent identifier",
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        75,
+        0,
+        50
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507076Z",
+    "updated_at": "2023-06-19T10:15:12.210772Z",
+    "inner_id": 9,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 10,
+    "annotations": [
+      {
+        "id": 11,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "QPiAvELxqT",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:17:26.052773Z",
+        "updated_at": "2023-06-19T10:17:26.052804Z",
+        "lead_time": 133.683,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "24e4f045-f0a9-4869-a2b1-41a8e69c1f4d",
+        "last_action": null,
+        "task": 10,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "VAMDC Query Store",
+      "tagline": "Quickly cite your data in scientific papers",
+      "description": "All the queries served by the VAMDC infrastructure are stored into the Query-Store, a service built by implementing both RDA data-citation recommendation, and the RDA-Scolix. The Query-Store gathers all the queries of VAMDC, together with the produced results and relevant bibliographic information. This service succeeded in removing the technical barriers linked with the automatic data-citation and with the delegation of credits for VAMDC-extracted data. : scientists may extract data from VAMDC, assign a DOI to those Data and cite them in publication through this DOI. Tha data-authors will receive automatically bibliographic credits via Scholix. Other Research Infrastructure may commission VAMDC for porting our solution to their particular use case. The adopted approach is transdisciplinar and may be adopted by other E-infrastructure, ESFRI or ERICs. No kind of limitation",
+      "scientific_domains": "Physical Sciences",
+      "categories": "Discovery",
+      "set1": {
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "Jupyter Notebook can be used to create and share documents that contain live code, equations, visualizations, and text.": "Data analysis with Jupyter Notebook",
+        "Dynamic On Demand Analysis Service (DODAS Portal)": "multi-user on demand solution for both interactive (Jupyter based) and distributed data analytics",
+        "Lagunas de Sierra Nevada \/ Glacier Lagoons of Sierra Nevada": "Science and conservation of glacier lagoons",
+        "SPACE-VIS ViaLactea Service": "SPACE-VIS ViaLactea Service for Galactic Plane data access and visualization under FAIR principles"
+      },
+      "set2": {
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "VAMDC Species Database": "Discover where to look for data for chemical species",
+        "ADAM Space": "Seamless access to planetary data",
+        "Jupyter Notebook can be used to create and share documents that contain live code, equations, visualizations, and text.": "Data analysis with Jupyter Notebook",
+        "SPACE-VIS ViaLactea Service": "SPACE-VIS ViaLactea Service for Galactic Plane data access and visualization under FAIR principles"
+      },
+      "set3": {
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "VAMDC Species Database": "Discover where to look for data for chemical species",
+        "Jupyter Notebook can be used to create and share documents that contain live code, equations, visualizations, and text.": "Data analysis with Jupyter Notebook",
+        "Dynamic On Demand Analysis Service (DODAS Portal)": "multi-user on demand solution for both interactive (Jupyter based) and distributed data analytics",
+        "SPACE-VIS ViaLactea Service": "SPACE-VIS ViaLactea Service for Galactic Plane data access and visualization under FAIR principles"
+      },
+      "set4": {
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "VAMDC Species Database": "Discover where to look for data for chemical species",
+        "PRISM: Peer Review Information Service for Monographs": "Peer Review process description of Open Access Monographs",
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "Jupyter Notebook can be used to create and share documents that contain live code, equations, visualizations, and text.": "Data analysis with Jupyter Notebook"
+      },
+      "set5": {
+        "GBIF Spain Collections Registry": "Metadata registry for Spanish institutions, collections and datasets sharing data through GBIF.ES",
+        "Dissemin": "Spot your own paywalled papers. Liberate them in one click.",
+        "VAMDC Species Database": "Discover where to look for data for chemical species",
+        "PRISM: Peer Review Information Service for Monographs": "Peer Review process description of Open Access Monographs",
+        "EDP-Catalogue - Metadata Catalogue for environmental data discoverability": "Discover datasets collected at Eurac Research and access them using our APIs or web applications",
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis"
+      },
+      "shuffled_diversities": [
+        100,
+        50,
+        75,
+        25,
+        0
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507127Z",
+    "updated_at": "2023-06-19T10:17:26.071374Z",
+    "inner_id": 10,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 11,
+    "annotations": [
+      {
+        "id": 12,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 4"
+              ]
+            },
+            "id": "WVMt57EtpG",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:55:25.806305Z",
+        "updated_at": "2023-06-19T10:55:25.806326Z",
+        "lead_time": 2279.572,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "693c68e0-5390-4384-a22d-e810647f7fcc",
+        "last_action": null,
+        "task": 11,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Kuha2 metadata server",
+      "tagline": "Open Source DDI Aware Metadata Server",
+      "description": "Kuha2 is a metadata server that provides descriptive social science research metadata for harvesting via multiple protocols (e.g. OAI-PMH) and a growing variety of metadata standards (e.g. DDI-C 2.5).\n\nThe software is a collection of applications and consists of three server applications, a client application and a database. Kuha2 components communicate to each other through RESTful APIs. and the use of the Document Store is not restricted to DDI.\n\nThe development of the server software was initiated by CESSDA SaW project and has continued as an open source project led by FSD. Kuha2 provides data archives or repositories with an easy-to-use entry point for integrating into CESSDA Data Catalogue or other catalogues.",
+      "scientific_domains": "Other Social Sciences, Generic",
+      "categories": "Software Package",
+      "set1": {
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "DataLad - free and open source distributed data management": " distributed system for joint management of code, data, and their relationship",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI"
+      },
+      "set2": {
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "DataLad - free and open source distributed data management": " distributed system for joint management of code, data, and their relationship",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage"
+      },
+      "set3": {
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "Data Discovery and Access Service": "Seamlessly discovery and access data across several data providers",
+        "Technical support towards OpenAIRE compliance": "OpenAIRE compliance made simple",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "EDC EOxHub Workspace": "Online workspaces close to data ready to kick off your EO workloads"
+      },
+      "set4": {
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "DataLad - free and open source distributed data management": " distributed system for joint management of code, data, and their relationship",
+        "Enrichment API": "Enhance the metadata from your files or Research Objects with the Enrichment API",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "EDC EOxHub Workspace": "Online workspaces close to data ready to kick off your EO workloads"
+      },
+      "set5": {
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Technical support towards OpenAIRE compliance": "OpenAIRE compliance made simple",
+        "Services for Sensitive Data (TSD)": "Services for sensitive data",
+        "B2FIND": "Find research data, research data portal",
+        "Enrichment API": "Enhance the metadata from your files or Research Objects with the Enrichment API",
+        "EDC EOxHub Workspace": "Online workspaces close to data ready to kick off your EO workloads"
+      },
+      "shuffled_diversities": [
+        25,
+        0,
+        75,
+        50,
+        100
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507173Z",
+    "updated_at": "2023-06-19T10:55:25.827545Z",
+    "inner_id": 11,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 12,
+    "annotations": [
+      {
+        "id": 13,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 4"
+              ]
+            },
+            "id": "87SId6IJ2A",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T10:56:17.874862Z",
+        "updated_at": "2023-06-19T10:56:17.874886Z",
+        "lead_time": 51.887,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "a91cf1cf-868c-4d36-a5a9-d205cd1c38e1",
+        "last_action": null,
+        "task": 12,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "PRACE Advanced Training Centres",
+      "tagline": "State-of-the-art training programme in HPC",
+      "description": "The PRACE Advanced Training Centres (PATCs) were established in 2012 as part of the PRACE-2IP project to jointly develop and deliver a world-class HPC training programme for the European HPC and computational science community. They consisted of experienced training providers from 6 European countries that have since expanded to form the [PRACE Training Centres](http:\/\/https:\/\/marketplace.eosc-portal.eu\/services\/prace-training-centres).",
+      "scientific_domains": "Generic",
+      "categories": "In-House Courses, Open Registration Courses",
+      "set1": {
+        "PRACE Training Centres": "State-of-the-art training programme in HPC",
+        "PRACE Seasonal Schools and International Summer School": "HPC Seasonal Schools and the International HPC Summer School",
+        "EGI ISO 27001 Training": "Learn how to manage and secure information assets",
+        "INFRAFRONTIER Training in mouse functional genomics": "Wide range of state-of-the-art training opportunities",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "OCRE Cloud Services by PROACT": "OCRE and Proact, the right combination for hybrid cloud solutions for NRENs"
+      },
+      "set2": {
+        "PRACE Training Centres": "State-of-the-art training programme in HPC",
+        "EGI ISO 27001 Training": "Learn how to manage and secure information assets",
+        "PRACE Code Vault": "The open repository for high performance computing code samples",
+        "INFRAFRONTIER Training in mouse functional genomics": "Wide range of state-of-the-art training opportunities",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "OCRE Cloud Services by PROACT": "OCRE and Proact, the right combination for hybrid cloud solutions for NRENs"
+      },
+      "set3": {
+        "PRACE Training Centres": "State-of-the-art training programme in HPC",
+        "PRACE Training Portal": "Browse, search, explore upcoming HPC training events",
+        "PRACE Seasonal Schools and International Summer School": "HPC Seasonal Schools and the International HPC Summer School",
+        "EGI ISO 27001 Training": "Learn how to manage and secure information assets",
+        "EGI FitSM Training": "Learn how to manage IT services with a pragmatic and lightweight standard",
+        "PRACE Code Vault": "The open repository for high performance computing code samples"
+      },
+      "set4": {
+        "PRACE Training Centres": "State-of-the-art training programme in HPC",
+        "INFRAFRONTIER Training in mouse functional genomics": "Wide range of state-of-the-art training opportunities",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "DEEP training facility": "Distributed training facility for Machine Learning, Artificial Intelligence and Deep Learning models.",
+        "OCRE Cloud Services by PROACT": "OCRE and Proact, the right combination for hybrid cloud solutions for NRENs",
+        "eduGAIN": "Unlocking global research and education c​​ollaboration."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        50,
+        75,
+        0,
+        100
+      ],
+      "duplicate_pairs": [
+        [
+          0,
+          25
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507214Z",
+    "updated_at": "2023-06-19T10:56:17.895644Z",
+    "inner_id": 12,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 13,
+    "annotations": [
+      {
+        "id": 14,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 4"
+              ]
+            },
+            "id": "fRXSjDCJ3T",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:00:07.665850Z",
+        "updated_at": "2023-06-19T11:00:07.665869Z",
+        "lead_time": 229.618,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "5ae32ee0-19fe-4d0a-928c-a55052a260b4",
+        "last_action": null,
+        "task": 13,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "GEO Discovery and Access Broker",
+      "tagline": "Multi-disciplinary discovery, access, and use of resources from the Global Earth Observation System of Systems",
+      "description": " GEO Discovery and Access Broker (GEO DAB) is a key component of the GEOSS Platform, transparently connecting GEOSS User’s requests to the resources shared by the GEOSS Providers. GEO DAB scope is to simplify cross and multi-disciplinary discovery, access, and use (or reuse) of disparate data and information. GEO DAB is a brokering framework that interconnects hundreds of heterogeneous and autonomous supply systems (the enterprise systems constituting the GEO metasystem) by providing mediation, harmonization, transformation, and QoS capabilities. GEO DAB can be accessed using several web service interfaces, available at [link][1]. [1]: http:\/\/eosc.geodab.eu\/gi-cat-StP\/ The GEOSS (Global Earth Observation System of Systems) Web Portal is the main entry point for discovering and accessing GEOSS data. GEOSS Platform interconnects more than 170 data systems globally, providing discoverability of more than 400M datasets. This version of the GEOSS Web Portal is connected also to the ECOPotential Virtual Laboratory, allowing users to execute available models utilizing GEOSS data as inputs.",
+      "scientific_domains": "Earth & Related Environmental Sciences",
+      "categories": "Scientific\/Research Data, Brokering",
+      "set1": {
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "SecureWatch": "With EarthWatch, stream and download industry-leading geospatial information in a single, powerful solution.",
+        "ADAM Space": "Seamless access to planetary data",
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "Occurrences DataCube Analyst": "Cross your datacube with geographic layers",
+        "GBIF Portugal Occurrence Records": "Access to occurrence biodiversity data published by Portuguese providers, or by international providers for Portugal"
+      },
+      "set2": {
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "Data Discovery and Access Service": "Seamlessly discovery and access data across several data providers",
+        "SecureWatch": "With EarthWatch, stream and download industry-leading geospatial information in a single, powerful solution.",
+        "ADAM Platform": "ADAM is a key technology to enable seamless access and view services to environmental data. ADAM removes the main barriers to realize the democratization data process.",
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "GBIF Portugal Occurrence Records": "Access to occurrence biodiversity data published by Portuguese providers, or by international providers for Portugal"
+      },
+      "set3": {
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "ADAM Platform": "ADAM is a key technology to enable seamless access and view services to environmental data. ADAM removes the main barriers to realize the democratization data process.",
+        "ADAM Space": "Seamless access to planetary data",
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "Geohazards Exploitation Platform (GEP)": "On-demand and Systematic EO processing services for the Geohazards community",
+        "GBIF Portugal Occurrence Records": "Access to occurrence biodiversity data published by Portuguese providers, or by international providers for Portugal"
+      },
+      "set4": {
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "ADAM Space": "Seamless access to planetary data",
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "Geohazards Exploitation Platform (GEP)": "On-demand and Systematic EO processing services for the Geohazards community",
+        "Occurrences DataCube Analyst": "Cross your datacube with geographic layers",
+        "GBIF Portugal Occurrence Records": "Access to occurrence biodiversity data published by Portuguese providers, or by international providers for Portugal"
+      },
+      "set5": {
+        "Data discovery and access portal": "Through the ICOS data portal, the Carbon Portal, the Integrated Carbon Observing system provides an easy to use human and machine readable open data interface to dicsover and access all its carbon cycle observation data and related elaborated products",
+        "Data Discovery and Access Service": "Seamlessly discovery and access data across several data providers",
+        "SecureWatch": "With EarthWatch, stream and download industry-leading geospatial information in a single, powerful solution.",
+        "Fisheries Atlas VLab": "overview of harmonised time-series of catch and effort accessible through a map Viewer",
+        "ADAM Platform": "ADAM is a key technology to enable seamless access and view services to environmental data. ADAM removes the main barriers to realize the democratization data process.",
+        "ENES Data Space": "Data science environment for climate data analysis on top of the EOSC Compute Platform"
+      },
+      "shuffled_diversities": [
+        50,
+        25,
+        75,
+        100,
+        0
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507262Z",
+    "updated_at": "2023-06-19T11:00:07.684422Z",
+    "inner_id": 13,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 14,
+    "annotations": [
+      {
+        "id": 15,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 2"
+              ]
+            },
+            "id": "KMQIBT9m-o",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:16:28.913177Z",
+        "updated_at": "2023-06-19T11:16:28.913196Z",
+        "lead_time": 981.079,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "94979b2c-af1a-4407-aed3-3997603541de",
+        "last_action": null,
+        "task": 14,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Sentinel Hub",
+      "tagline": "Seamless access to global archives of Sentinel, Landsat, MODIS, Envisat and other satellite missions.",
+      "description": "Sentinel Hub is a multi- spectral and multi-temporal big data satellite imagery service, capable of fully automated archiving, real-time processing and distribution of remote sensing data and related EO products. Users can use OGC compliant and proprietary APIs to retrieve satellite data over their AOI and specific time range from full archives in a matter of seconds. Sentinel Hub received Copernicus Masters Award 2016.",
+      "scientific_domains": "Earth & Related Environmental Sciences",
+      "categories": "Publishing",
+      "set1": {
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "Geohazards Exploitation Platform (GEP)": "On-demand and Systematic EO processing services for the Geohazards community",
+        "GEO Discovery and Access Broker": "Multi-disciplinary discovery, access, and use of resources from the Global Earth Observation System of Systems",
+        "Remote Monitoring and Smart Sensing": "Remote Monitoring and Smart Sensing",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "Jelastic Platform-as-a-Service": "Multi-Cloud DevOps PaaS"
+      },
+      "set2": {
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "Geohazards Exploitation Platform (GEP)": "On-demand and Systematic EO processing services for the Geohazards community",
+        "EODC JupyterHub for global Copernicus data": "EODC JupyterHub provides access to the global EODC Copernicus Data Archive.",
+        "GEO Discovery and Access Broker": "Multi-disciplinary discovery, access, and use of resources from the Global Earth Observation System of Systems",
+        "Remote Monitoring and Smart Sensing": "Remote Monitoring and Smart Sensing",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI"
+      },
+      "set3": {
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "SecureWatch": "With EarthWatch, stream and download industry-leading geospatial information in a single, powerful solution.",
+        "Remote Monitoring and Smart Sensing": "Remote Monitoring and Smart Sensing",
+        "SeaDataNet European Directory of the Cruise Summary Reports (CSR)": "Discover research oceanographic cruises",
+        "SeaDataNet DOI minting service": "Publish your marine data and get a DOI",
+        "Jelastic Platform-as-a-Service": "Multi-Cloud DevOps PaaS"
+      },
+      "set4": {
+        "EODC Data Catalogue Service": "Catalog Service for the Web (CSW), OGC compliant catalogue service to expose metadata of geospatial records hosted at EODC",
+        "Geohazards Exploitation Platform (GEP)": "On-demand and Systematic EO processing services for the Geohazards community",
+        "EODC JupyterHub for global Copernicus data": "EODC JupyterHub provides access to the global EODC Copernicus Data Archive.",
+        "GEO Discovery and Access Broker": "Multi-disciplinary discovery, access, and use of resources from the Global Earth Observation System of Systems",
+        "EISCAT data access portal": "EISCAT user portal",
+        "SecureWatch": "With EarthWatch, stream and download industry-leading geospatial information in a single, powerful solution."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        50,
+        25,
+        75,
+        0
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507305Z",
+    "updated_at": "2023-06-19T11:16:28.932830Z",
+    "inner_id": 14,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 15,
+    "annotations": [
+      {
+        "id": 16,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "kddOuheSa_",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:18:57.475635Z",
+        "updated_at": "2023-06-19T11:18:57.475672Z",
+        "lead_time": 148.376,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "6c9c8979-08e5-49fa-a5a5-922492b4b58b",
+        "last_action": null,
+        "task": 15,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Language Resource Switchboard",
+      "tagline": "A web application that suggests language analysis tools for specific data sets.",
+      "description": "A web application that suggests language analysis tools for specific data sets. It provides access to tools for Sentence level analysis (Constituency Parsing - Dependency Parsing - Shallow Parsing), Word level analysis (Lemmatization - Morphological Analysis - Named Entity Recognition - Part-Of-Speech Tagging), Semantic analysis (Coreference Resolution - Sentiment Analysis - Text Summarization), Digital Humanities analysis (Distant Reading - Named Entity Linking - Stylometry - Topic modelling) and Speech Recognition. The Language Resource Switchboard (https:\/\/switchboard.clarin.eu) will automatically provide a list of available tools, based on the language and format of the input. The Switchboard can also be invoked from the Virtual Language Observatory (https:\/\/vlo.clarin.eu) and B2DROP (see Suggested compatible services below).",
+      "scientific_domains": "Other Social Sciences, Languages & Literature, Other Humanities",
+      "categories": "Services",
+      "set1": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "re3data - registry of research data repositories": "Find research data repositories and their metadata on a global scale.",
+        "SurveyCodings.org": "Classify open responses during the interview"
+      },
+      "set2": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "re3data - registry of research data repositories": "Find research data repositories and their metadata on a global scale.",
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "ElixirFM": "A high-level implementation of Functional Arabic Morphology"
+      },
+      "set3": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "Bielefeld Academic Search Engine (BASE)": "Academic Search Engine",
+        "re3data - registry of research data repositories": "Find research data repositories and their metadata on a global scale."
+      },
+      "set4": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "re3data - registry of research data repositories": "Find research data repositories and their metadata on a global scale.",
+        "Visual Media Service Virtual Research Environment": "Upload visual media files and transform them into an efficient web format, making them ready for web-based visualisation.",
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "ElixirFM": "A high-level implementation of Functional Arabic Morphology"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        50,
+        0,
+        75
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507348Z",
+    "updated_at": "2023-06-19T11:18:57.500616Z",
+    "inner_id": 15,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 16,
+    "annotations": [
+      {
+        "id": 17,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "gqSLwcfUtf",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:23:09.590106Z",
+        "updated_at": "2023-06-19T11:23:09.590128Z",
+        "lead_time": 251.937,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "854b1979-6fd2-4e27-8562-1cd79662c3bc",
+        "last_action": null,
+        "task": 16,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Data Service Portal Aila",
+      "tagline": "Download Data from Aila",
+      "description": "Aila is Finnish Social Science Data Archive’s (FSD) online data discovery, deposit and download service. Aila facilitates access to research data from the social sciences and related fields. \n\nEveryone can download data online from Aila according to the conditions set for each dataset. Some data are available for all users under the Creative Commons BY 4.0 license and for the rest registration in advance is required. Everyone can freely search, filter and browse rich study descriptions of archived data in Finnish and in English. This includes not only descriptive metadata but variable level metadata and frequencies as well. Data download is always free of charge. Students and staff from the Finnish higher education and research institutions can register themselves using HAKA identity federation. Other users apply for a username from FSD User Services. \n\nDatasets may be deposited to Aila according to FSD's collection policy. Both quantitative (numerical) or qualitative (i.e. text, speech, or visual images) data collected for research purposes are accepted. A prerequisite for archiving is that the data can be reused at least for research purposes. Aila features a secure transfer service for data file(s) and data description as well as other material, such as the questionnaire, coding instructions and interview questions. \n\nFSD takes care of long-term preservation and access to the data through Aila. Especially quantitative and qualitative research data from and about Finland are available through Aila and data may be translated into English for on request.\n\nThe service helps to\n- save time and resource for researchers when accessing data\n- increase visibility and merit, and verification of research through increased data citation\n- avoid overlapping data collection or recollection of data + reduce potential duplication of effort\n- secure value to future researchers and students intervention\n- provide more equal and easy access to metadata and data\n- facilitate use of data by new audiences\n- provide well curated and documented data\n- preserve data for the long term\n- enable comparative and multidisciplinary research\n- facilitate verification and reproducibility of research\n- remove user burden from data depositors\n- facilitate open science\n- motivate new research.",
+      "scientific_domains": "Sociology, Political Sciences, Educational Sciences, Media & Communications, Other Social Sciences, Philosophy, Ethics & Religion, Other Humanities, Health Sciences",
+      "categories": "Other",
+      "set1": {
+        "da|ra - DOI Registration Service for social science and economic data": "DOI Registraion for social and economic data",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities",
+        "European Social Survey (ESS) as a service": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+        "Cloudferro Data related Services - EO Finder": "Manage your data products",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "Web Panel Sample Service (WPSS) for the European Social Survey (ESS ERIC)": "WPSS stands for Web Panel Sample Service. It is a web application paired with a survey platform to meet the specific needs of ESS web panel cross-national web surveys."
+      },
+      "set2": {
+        "da|ra - DOI Registration Service for social science and economic data": "DOI Registraion for social and economic data",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities",
+        "SSH Open Marketplace": "Discover new and contextualised resources for your research in Social Sciences and Humanities: tools, services, training materials, workflows and datasets.",
+        "Data Management Expert Guide (DMEG)": "Share Expertise, Enhance Data FAIRness",
+        "CloudFerro Data Collections Catalog": "Data Collections Catalog is based on two solutions – CKAN - comprehensive frontend catalogue application for information discovery and EO Browser – specialized catalogue application for robust satellite imagery discovery and quick georeferenced preview",
+        "OpenAIRE Graph Access API": "A gateway to open research"
+      },
+      "set3": {
+        "da|ra - DOI Registration Service for social science and economic data": "DOI Registraion for social and economic data",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities",
+        "LEMONADE - Live Exploration and Mining Of a Non-trivial Amount of Data from Everywhere": "Visual Data Analytics Tool",
+        "Arkivum Digital Archiving and Preservation Solution": "Ensuring research data lives forever",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "Web Panel Sample Service (WPSS) for the European Social Survey (ESS ERIC)": "WPSS stands for Web Panel Sample Service. It is a web application paired with a survey platform to meet the specific needs of ESS web panel cross-national web surveys."
+      },
+      "set4": {
+        "da|ra - DOI Registration Service for social science and economic data": "DOI Registraion for social and economic data",
+        "LEMONADE - Live Exploration and Mining Of a Non-trivial Amount of Data from Everywhere": "Visual Data Analytics Tool",
+        "Arkivum Digital Archiving and Preservation Solution": "Ensuring research data lives forever",
+        "Virtual Collection Registry": "A service that allows researchers to create their own citable digital bookmarks.",
+        "DataverseNO": "A certified and FAIR-aligned national repository for research data.",
+        "Web Panel Sample Service (WPSS) for the European Social Survey (ESS ERIC)": "WPSS stands for Web Panel Sample Service. It is a web application paired with a survey platform to meet the specific needs of ESS web panel cross-national web surveys."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        0,
+        50,
+        100
+      ],
+      "duplicate_pairs": [
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507398Z",
+    "updated_at": "2023-06-19T11:23:09.608441Z",
+    "inner_id": 16,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 17,
+    "annotations": [
+      {
+        "id": 18,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "NIhOkbd65E",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:23:57.483423Z",
+        "updated_at": "2023-06-19T11:23:57.483440Z",
+        "lead_time": 47.717,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "c9d72e52-257e-4c5d-9c10-12f7025bd430",
+        "last_action": null,
+        "task": 17,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "PAN gitlab",
+      "tagline": "GitLab for the EOSC PAN Science Demonstrator",
+      "description": "Repository service for EOSC PAN notebooks and cloud functions for EOSC PAN FaaS. Gitlab runners for continuous integration in the DESY Compute Cloud, building and publishing docker containers in the project registry.",
+      "scientific_domains": "Generic",
+      "categories": "Other",
+      "set1": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools.",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science"
+      },
+      "set2": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "European Cloud Hosting": "A solid, simple, scalable and secure European cloud hosting alternative",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "SWITCHengines": "SWITCHengines - for bigger data and faster research",
+        "STFC Rucio Data Management Service": "Scientific Data Management",
+        "CyVerse UK": "Cyberinfrastructure for life science"
+      },
+      "set3": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "European Cloud Hosting": "A solid, simple, scalable and secure European cloud hosting alternative",
+        "CloudFerro Infrastructure": "CREODIAS platform is a cloud infrastructure adapted to the processing of big amounts of EO data, including an EO Data storage cluster and a dedicated IaaS cloud infrastructure for the platform’s Users",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "Rahti Container Cloud": "Rahti - Container cloud for science",
+        "ePouta Virtual Private Cloud": "Secure and cost-effective cloud computing for processing sensitive data"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        50,
+        25,
+        0
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ],
+        [
+          50,
+          100
+        ],
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507439Z",
+    "updated_at": "2023-06-19T11:23:57.502546Z",
+    "inner_id": 17,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 18,
+    "annotations": [
+      {
+        "id": 19,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "ek0bvixQS7",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:25:55.127619Z",
+        "updated_at": "2023-06-19T11:25:55.127638Z",
+        "lead_time": 117.471,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "f6b4b219-1c5d-42ec-8b81-0df639deacce",
+        "last_action": null,
+        "task": 18,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "DARIAH-Campus",
+      "tagline": "A discovery framework and hosting platform for arts and humanities learning resources.",
+      "description": "DARIAH-Campus is both a discovery framework and a hosting platform for DARIAH and DARIAH-affiliated offerings in training and education.\nThe goal of DARIAH-Campus is to widen access to open, inclusive, high-quality learning materials that aim to enhance creativity, skills, technology and knowledge in the digitally-enabled arts and humanities.",
+      "scientific_domains": "Other Humanities",
+      "categories": "Training Platform",
+      "set1": {
+        "Digital Humanities and Cultural Heritage OpenAIRE Community Gateway": "Single entry point for discovery and sharing of scientific results in Digital Humanities and Cultural Heritage",
+        "EGI Training Infrastructure": "Dedicated computing and storage for training and education",
+        "EOSC Synergy Online Training Platform": "Modular online training platform for EOSC",
+        "PaN-Training e-Learning Platform": "A Photon and Neutron e-Learning platform",
+        "Visual Media Service Virtual Research Environment": "Upload visual media files and transform them into an efficient web format, making them ready for web-based visualisation.",
+        "GoTriple Discovery platform": "Discover, Connect, Collaborate in the Social Sciences and Humanities"
+      },
+      "set2": {
+        "Digital Humanities and Cultural Heritage OpenAIRE Community Gateway": "Single entry point for discovery and sharing of scientific results in Digital Humanities and Cultural Heritage",
+        "EGI Training Infrastructure": "Dedicated computing and storage for training and education",
+        "EOSC Synergy Online Training Platform": "Modular online training platform for EOSC",
+        "Visual Media Service Virtual Research Environment": "Upload visual media files and transform them into an efficient web format, making them ready for web-based visualisation.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "Conny Kristel Fellowship Programme": "The Conny Kristel Fellowship Programme supports transnational Holocaust research by providing access to archival resources and expertise."
+      },
+      "set3": {
+        "Digital Humanities and Cultural Heritage OpenAIRE Community Gateway": "Single entry point for discovery and sharing of scientific results in Digital Humanities and Cultural Heritage",
+        "EOSC Synergy Online Training Platform": "Modular online training platform for EOSC",
+        "Visual Media Service Virtual Research Environment": "Upload visual media files and transform them into an efficient web format, making them ready for web-based visualisation.",
+        "Open Science Training": "Practice Open and FAIR Science",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "Conny Kristel Fellowship Programme": "The Conny Kristel Fellowship Programme supports transnational Holocaust research by providing access to archival resources and expertise."
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        75
+      ],
+      "duplicate_pairs": [
+        [
+          0,
+          25
+        ],
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507482Z",
+    "updated_at": "2023-06-19T11:25:55.145864Z",
+    "inner_id": 18,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 19,
+    "annotations": [
+      {
+        "id": 20,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 4"
+              ]
+            },
+            "id": "W6Kay6PYe7",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:27:34.668685Z",
+        "updated_at": "2023-06-19T11:27:34.668704Z",
+        "lead_time": 99.364,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "0bd9823b-f3d9-4432-b9d6-b97aa8d703ce",
+        "last_action": null,
+        "task": 19,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "ePouta Virtual Private Cloud",
+      "tagline": "Secure and cost-effective cloud computing for processing sensitive data",
+      "description": "This service provides a infrastructure as a-service for running analysis on sensitive data. The ePouta Virtual Private Cloud service allows customers to provision virtual machines and storage resources directly to their own internal networks. It provides an easy to use admin web interface and a programmable API for managing virtual machines, networks and storage. CSC ePouta meets elevated information security level regulations and is targeted for sensitive data processing.",
+      "scientific_domains": "Generic",
+      "categories": "Other",
+      "set1": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools.",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use"
+      },
+      "set2": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "European Cloud Hosting": "A solid, simple, scalable and secure European cloud hosting alternative",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "PAN gitlab": "GitLab for the EOSC PAN Science Demonstrator",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use"
+      },
+      "set3": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "European Cloud Hosting": "A solid, simple, scalable and secure European cloud hosting alternative",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "Nuvla.io B2B SaaS edge-to-cloud management platform and marketplace of business applications": "Multi-cloud\/edge\/hybrid management platform operated by SixSq to reduce costs and improve efficiency",
+        "PAN gitlab": "GitLab for the EOSC PAN Science Demonstrator"
+      },
+      "set4": {
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools.",
+        "STFC Rucio Data Management Service": "Scientific Data Management",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        50,
+        25,
+        0,
+        75
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507524Z",
+    "updated_at": "2023-06-19T11:27:34.687097Z",
+    "inner_id": 19,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 20,
+    "annotations": [
+      {
+        "id": 21,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 5"
+              ]
+            },
+            "id": "LhRsDXcoV9",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T11:29:05.823748Z",
+        "updated_at": "2023-06-19T11:29:05.823766Z",
+        "lead_time": 90.986,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "2468bb5d-52af-4342-82b8-b260f9e18e78",
+        "last_action": null,
+        "task": 20,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "GÉANT IP",
+      "tagline": "Providing high-bandwidth, high-speed international connectivity for millions of academic user​s",
+      "description": "GEANT IP provides general-purpose IP transit for national research and education networking (NREN) organisations and other approved research and education partners and providers only. Its core function is to provide a private service for IP (internet protocol) traffic that is separated from general-purpose access to the internet.​ Wor​king at speeds of up to 100Gbps, GEANT IP provides core connectivity that supports in​ter-NREN con​​nectivity​​ (10Gbps to multiples of 100Gbps), Peering, GEANT World Service, Dedicated, uncontended IP connectivity. Individual end-users should contact their local NREN or campus to access GEANT IP.\n",
+      "scientific_domains": "Other",
+      "categories": "Virtual Network",
+      "set1": {
+        "GÉANT Lambda": "High-performance interconnectivity for the most demanding networking requirements.",
+        "GÉANT L3VPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT MDVPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT Plus": "High-performance interconnectivity for the most demanding networking requirements.",
+        "GÉANT Open": "High-performance interconnectivity for the most demanding networking requirements.",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use"
+      },
+      "set2": {
+        "GÉANT Lambda": "High-performance interconnectivity for the most demanding networking requirements.",
+        "GÉANT MDVPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "OpenAIRE Login": "Secure access made easy"
+      },
+      "set3": {
+        "GÉANT Lambda": "High-performance interconnectivity for the most demanding networking requirements.",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "Trusted Certificate Service": "Increasing online security by facilitating the deployment of digital certificates.",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "OpenAIRE Login": "Secure access made easy",
+        "eduDNS: Dynamic DNS service for Academia": "Dynamic DNS service: Forget about IP addresses"
+      },
+      "set4": {
+        "GÉANT Lambda": "High-performance interconnectivity for the most demanding networking requirements.",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "PRACE Massive Open Online Courses (MOOC)": "PRACE Massive Open Online Courses",
+        "OpenAIRE Login": "Secure access made easy",
+        "eduDNS: Dynamic DNS service for Academia": "Dynamic DNS service: Forget about IP addresses",
+        "ICOS Jupyter Hub": "Use our Jupyter Hub services to get easy access to and explore ICOS data"
+      },
+      "set5": {
+        "GÉANT Lambda": "High-performance interconnectivity for the most demanding networking requirements.",
+        "GÉANT L3VPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT MDVPN": "Increased pri​​vacy and control - helping to build effective virtual teams across borders.",
+        "GÉANT Plus": "High-performance interconnectivity for the most demanding networking requirements.",
+        "Nivola": "The completely open source platform that makes the use of cloud services easy. It is custom designed for public administration with high security standards, simple and flexible and pay per use",
+        "WiFiMon": "Managing WiFi performance for Research and Education"
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        75,
+        100,
+        25
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507569Z",
+    "updated_at": "2023-06-19T11:29:05.842145Z",
+    "inner_id": 20,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 21,
+    "annotations": [
+      {
+        "id": 22,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "YXwow0XLPY",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:09:50.921483Z",
+        "updated_at": "2023-06-19T12:09:50.921504Z",
+        "lead_time": 2444.925,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "d48d3bc1-9f53-4edf-87c1-b8ed43874fc8",
+        "last_action": null,
+        "task": 21,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "European Cloud Hosting",
+      "tagline": "A solid, simple, scalable and secure European cloud hosting alternative",
+      "description": "Exoscale is a simple to use yet advanced on-demand compute and storage as a service platform available from several locations in Europe with resources spinned up in seconds at an affordable per minute pricing: a) Cloud servers, quick to get started, easy to run and scale, fully cloud native, b) Object Storage, S3 compliant, no lock-in, cloud native object storage solution, for any kind of data, pay only what you use, c) GPU Servers, latest generation cards, extra-large SSD storage, d) DNS zones with straightforward web interface, e) Runstatus, hosted status dashboards for developing teams. Exoscale is a simple to use yet advanced on-demand compute and storage as a service platform available from several locations in Europe with resources spinned up in seconds at an affordable per minute pricing: a) Cloud servers, quick to get started, easy to run and scale, fully cloud native, b) Object Storage, S3 compliant, no lock-in, cloud native object storage solution, for any kind of data, pay only what you use, c) GPU Servers, latest generation cards, extra-large SSD storage, d) DNS zones with straightforward web interface, e) Runstatus, hosted status dashboards for developing teams. With Exoscale we’re building infrastructure and services to help European teams build cloud native applications. This relentless focus allows us to build a cloud platform that’s both powerful and enjoyable to use. Exoscale is also the ideal partner for those looking to respect the strict Swiss data privacy laws. We also help engineers ensure that the workloads started in Austria, stay in Austria. Same goes for workloads started in Germany: we guarantee that they will remain in Germany. This means that your projects are GDPR-compliant when you work with Exoscale.Trusted by engineers across Europe. Our customer success engineers have helped hundreds of customers from all over Europe migrate, run and scale production workloads on Exoscale.",
+      "scientific_domains": "Generic",
+      "categories": "Other",
+      "set1": {
+        "ePouta Virtual Private Cloud": "Secure and cost-effective cloud computing for processing sensitive data",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools.",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science"
+      },
+      "set2": {
+        "ePouta Virtual Private Cloud": "Secure and cost-effective cloud computing for processing sensitive data",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "CloudFerro Infrastructure": "CREODIAS platform is a cloud infrastructure adapted to the processing of big amounts of EO data, including an EO Data storage cluster and a dedicated IaaS cloud infrastructure for the platform’s Users",
+        "PaN notebook": "Jupyter Hub for Photon and Neutron Science",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools."
+      },
+      "set3": {
+        "ePouta Virtual Private Cloud": "Secure and cost-effective cloud computing for processing sensitive data",
+        "Embassy Cloud": "EMBL-EBI's OpenStack cloud infrastructure co-located with their global life-science data resources and bioinformatics services and tools.",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "PSI Remote Desktop Service": "Beamline console and HPC cluster access",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science"
+      },
+      "set4": {
+        "ePouta Virtual Private Cloud": "Secure and cost-effective cloud computing for processing sensitive data",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "cPouta Community Cloud": "cPouta - IaaS for science",
+        "CloudFerro Infrastructure": "CREODIAS platform is a cloud infrastructure adapted to the processing of big amounts of EO data, including an EO Data storage cluster and a dedicated IaaS cloud infrastructure for the platform’s Users",
+        "Nuvla.io B2B SaaS edge-to-cloud management platform and marketplace of business applications": "Multi-cloud\/edge\/hybrid management platform operated by SixSq to reduce costs and improve efficiency",
+        "PAN gitlab": "GitLab for the EOSC PAN Science Demonstrator"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        50,
+        25,
+        100,
+        0
+      ],
+      "duplicate_pairs": [
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507613Z",
+    "updated_at": "2023-06-19T12:09:50.940655Z",
+    "inner_id": 21,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 22,
+    "annotations": [
+      {
+        "id": 23,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "wufc0wB18w",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:14:15.356687Z",
+        "updated_at": "2023-06-19T12:14:15.356706Z",
+        "lead_time": 264.263,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "67c213ee-7753-48a6-b39a-369e1a30c4c7",
+        "last_action": null,
+        "task": 22,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "RPrototypingLab Virtual Research Environment",
+      "tagline": "Development and integration environment for R.",
+      "description": "The RPrototypingLab is conceived to provide its users with a complete development and integration environment for R. In particular, the environment is powered by RStudio®, an open source development environment including a code editor, and debugging and visualization tools. Moreover, this VRE is powered by the gCube data analytics platform and allows to perform the following tasks: Integrate R algorithms into the platform; Execute integrated algorithms by benefitting from a distributed computing infrastructure Automatically generate research objects out of any computation In addition to the basic functionalities, as a workspace for sharing objects of interest, a social networking area for supporting the discussions among members and a user management facility for managing membership, this VLab is specifically equipped with the following capabilities: - Geospatial Data View: a facility enabling users to discover and visualize GIS layers, e.g. species distribution maps that have been generated and published. This facility relies on the GeoExplorer portlet and makes it possible to effectively exploit the generated maps and perform comparisons and analysis of the diverse distributions by enabling maps overlay, transects production and values inspection; - Data Analytics at Scale: a facility enabling users to benefit from the offering of the DataMiner service and interactively execute a large array of data analytics tasks on datasets. These algorithms range from trajectory simulations based on the Ichthyop model to Virtual Population Analysis (VPA) Algorithms, spatial reallocation, ensemble model-based approaches Algorithm Importer: a facility enabling users to transform R-based algorithms and methods into DataMiner algorithms, i.e. methods that can be executed by the data analytics platform. This transformation assists in annotating the code thus making it possible for Data Miner to properly execute it R Studio as-a-Service: a facility enabling users to access a fully-fledged RStudio® working environment directly from the VRE. This environment is integrated with the rest of VRE facilities enabling the usage of files from the workspace and the storage of new files into the workspace",
+      "scientific_domains": "Computer & Information Sciences",
+      "categories": "Machine Learning, Job Execution",
+      "set1": {
+        "Northern Data Cloud Services": "High-Performance Computing cloud infrastructure specialized in GPU compute.",
+        "Analytics Engine": "Unique access point to perform data mining and data analytics tasks on heterogeneous data",
+        "Alien and Invasive Species Virtual Research Environment": "A web-based, collaborative working environment enacting to predict the spread of an invasive species (possibly alien) in a new environment",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser.",
+        "TagMe": "Entity Linking tools"
+      },
+      "set2": {
+        "Northern Data Cloud Services": "High-Performance Computing cloud infrastructure specialized in GPU compute.",
+        "Analytics Engine": "Unique access point to perform data mining and data analytics tasks on heterogeneous data",
+        "Alien and Invasive Species Virtual Research Environment": "A web-based, collaborative working environment enacting to predict the spread of an invasive species (possibly alien) in a new environment",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "Latent Space Explorer": "Latent Space Explorer: Unsupervised Data Pattern Discovery on the Cloud",
+        "Pl@ntNet Identification Service": "AI-based plant identification relying on Pl@ntNet citizen observatory"
+      },
+      "set3": {
+        "Northern Data Cloud Services": "High-Performance Computing cloud infrastructure specialized in GPU compute.",
+        "Alien and Invasive Species Virtual Research Environment": "A web-based, collaborative working environment enacting to predict the spread of an invasive species (possibly alien) in a new environment",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser.",
+        "Distributed Deep Learning by Horovod": "deep learning, distributed, horovod",
+        "TagMe": "Entity Linking tools",
+        "Snap4City": "Smart City IOT as a Service, SCIaaS"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        0,
+        50
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ],
+        [
+          50,
+          100
+        ],
+        [
+          50,
+          75
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507655Z",
+    "updated_at": "2023-06-19T12:14:15.375143Z",
+    "inner_id": 22,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 23,
+    "annotations": [
+      {
+        "id": 24,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "YPWxrYByXm",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:15:49.396013Z",
+        "updated_at": "2023-06-19T12:15:49.396036Z",
+        "lead_time": 93.871,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "bcb1efbc-5288-41df-b84f-c87ec8a58659",
+        "last_action": null,
+        "task": 23,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "robotbenchmark",
+      "tagline": "Program simulated robots online - Compare your performance to the best - Share your achievements.",
+      "description": "robotbenchmark is a web service with a cloud-based 3D robot simulation software that provides a series of robotics challenges to researchers and students. Robotics challenges, including a performance evaluation metrics, are provided to the users. Users can program simulated robots in Python and run the simulation to evaluate the performance of their robot controllers. A ranking of the best performing robot controllers is stored for each benchmark, including a simulation playback capability. Researchers are welcome to contact us to add more benchmarks to this cloud service. Participation is free of charge. The added value for the researchers and students is the following: Ease-of-Use Realistic Simulation Software Relevant Robotics Challenges Comparison of Scientific Approaches The added value for the users is the following: Ease-of-Use Realistic Simulation Software Relevant Robotics Challenges Comparison of Scientific Approaches",
+      "scientific_domains": "Other Engineering & Technology Sciences",
+      "categories": "Other",
+      "set1": {
+        "STFC CVMFS Content Distribution Service": "Reliable experiment software distribution.",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "UT Rocket": "General purpose HPC cluster in UT HPCC.",
+        "DEEP training facility": "Distributed training facility for Machine Learning, Artificial Intelligence and Deep Learning models."
+      },
+      "set2": {
+        "STFC CVMFS Content Distribution Service": "Reliable experiment software distribution.",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "UT Rocket": "General purpose HPC cluster in UT HPCC.",
+        "Plant Classification": "Plant classification algorithm",
+        "DEEP training facility": "Distributed training facility for Machine Learning, Artificial Intelligence and Deep Learning models."
+      },
+      "set3": {
+        "STFC CVMFS Content Distribution Service": "Reliable experiment software distribution.",
+        "CyVerse UK": "Cyberinfrastructure for life science",
+        "AiiDAlab": "Reproducible turn-key workflows for materials science",
+        "MetaCentrum Cloud": "Czech national scientific cloud",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "cPouta Community Cloud": "cPouta - IaaS for science"
+      },
+      "set4": {
+        "": ""
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        25,
+        75,
+        0
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ],
+        [
+          25,
+          50
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507694Z",
+    "updated_at": "2023-06-19T12:15:49.414803Z",
+    "inner_id": 23,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 24,
+    "annotations": [
+      {
+        "id": 25,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "QzXAl-Phq9",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:18:08.822683Z",
+        "updated_at": "2023-06-19T12:18:08.822703Z",
+        "lead_time": 139.244,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "0a5ef5df-da53-4b93-ad91-7689a3485d81",
+        "last_action": null,
+        "task": 24,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "European Social Survey (ESS) as a service",
+      "tagline": "European Social Survey (ESS) data with 17, 000 variables across numerous countries and 20 years",
+      "description": "Data can be accessed for 17,000 variables and downloaded in 52 data files. \nThe tool and content will be updated continuously to improve access to ESS data and documentation. By April 2022, it will be supplemented by functionalities for data analysis and visualization.\n\nThe new ESS data and metadata service consists of multiple data and metadata repositories to support an efficient, collaborative, version-controlled data archive workflow. The service makes use of sophisticated metadata management  and cloud solutions for data storage and applications. The repositories are accessed via ESS API for management and dissemination of data and metadata. \n\nUse of the DDI Lifecycle metadata standard and bespoke software solutions enable powerful search, analysis, visualization and data download services. The new ESS service has made ESS data more findable. DOIs at study and dataset levels allow easier reuse of the data.",
+      "scientific_domains": "Other Social Sciences",
+      "categories": "Data Archives, Archive",
+      "set1": {
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "Kuha2 metadata server": "Open Source DDI Aware Metadata Server",
+        "OpenBioMaps": "Biodiversity data management platform",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "ICOS Jupyter Hub": "Use our Jupyter Hub services to get easy access to and explore ICOS data"
+      },
+      "set2": {
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage",
+        "OpenBioMaps": "Biodiversity data management platform",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "Thoth": "Open Book Metadata Dissemination System"
+      },
+      "set3": {
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "Kuha2 metadata server": "Open Source DDI Aware Metadata Server",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage",
+        "OpenBioMaps": "Biodiversity data management platform",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets"
+      },
+      "set4": {
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage",
+        "OpenBioMaps": "Biodiversity data management platform",
+        "EGI High-Throughput Compute": "Execute thousands of computational tasks to analyse large datasets",
+        "Thoth": "Open Book Metadata Dissemination System",
+        "B2FIND": "Find research data, research data portal"
+      },
+      "set5": {
+        "SurveyCodings.org": "Classify open responses during the interview",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "Language Resource Switchboard": "A web application that suggests language analysis tools for specific data sets.",
+        "Kuha2 metadata server": "Open Source DDI Aware Metadata Server",
+        "CESNET DataCare - Object Based Storage": "Ceph Object Storage - fast and reliable data storage",
+        "OpenBioMaps": "Biodiversity data management platform"
+      },
+      "shuffled_diversities": [
+        100,
+        50,
+        25,
+        75,
+        0
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507738Z",
+    "updated_at": "2023-06-19T12:18:08.841347Z",
+    "inner_id": 24,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 25,
+    "annotations": [
+      {
+        "id": 26,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 3"
+              ]
+            },
+            "id": "ERPaioaL-P",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:22:51.782754Z",
+        "updated_at": "2023-06-19T12:22:51.782789Z",
+        "lead_time": 282.789,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "4c1960de-6d3e-448a-8356-7535187ef4f9",
+        "last_action": null,
+        "task": 25,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Guardomic",
+      "tagline": "Bot defence for WWW sites and web services",
+      "description": "Guardomic is a bot mitigation engine aimed for web services owners who want to protect their websites from bot traffic and their users from fraudulent digital ads, or cryptocurrency web mining. A big part of our system are in-depth statistics, allowing our clients to be conscious about their traffic. The solution helps to defend from unwanted bot traffic and dangerous ad-fraud. The Guardomic allows to control it automatically or manually. If you choose to control the solution manually, it provides advanced monitoring and helps decide to block suspicious traffic, or allow it. Because of big impact on hardware performance, limiting or blocking of bot traffic in many cases the can save cost of an unnecessary hardware upgrade.",
+      "scientific_domains": "Generic",
+      "categories": "Other",
+      "set1": {
+        "Secret management service": "Managing secrets in Cloud",
+        "100 Percent IT Trusted Cloud": "Infrastructure as a Service (IaaS), secured by cutting edge cybersecurity software co-developed by the University of Oxford",
+        "Services for Sensitive Data (TSD)": "Services for sensitive data",
+        "AMNESIA": "Anonymize your datasets",
+        "MOBIS - Mobile observation integration service": "Mobile Observation Integration Service",
+        "EGI Online Storage": "Store, share and access your files and their metadata on a global scale"
+      },
+      "set2": {
+        "Secret management service": "Managing secrets in Cloud",
+        "AMNESIA": "Anonymize your datasets",
+        "MOBIS - Mobile observation integration service": "Mobile Observation Integration Service",
+        "Rahti Container Cloud": "Rahti - Container cloud for science",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "Data Service Portal Aila": "Download Data from Aila"
+      },
+      "set3": {
+        "Secret management service": "Managing secrets in Cloud",
+        "Services for Sensitive Data (TSD)": "Services for sensitive data",
+        "AMNESIA": "Anonymize your datasets",
+        "MOBIS - Mobile observation integration service": "Mobile Observation Integration Service",
+        "Rahti Container Cloud": "Rahti - Container cloud for science",
+        "WiFiMon": "Managing WiFi performance for Research and Education"
+      },
+      "set4": {
+        "Secret management service": "Managing secrets in Cloud",
+        "MOBIS - Mobile observation integration service": "Mobile Observation Integration Service",
+        "Rahti Container Cloud": "Rahti - Container cloud for science",
+        "WiFiMon": "Managing WiFi performance for Research and Education",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "B2HANDLE": "Register your research data with a persistent identifier"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        25,
+        75
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507777Z",
+    "updated_at": "2023-06-19T12:22:51.802138Z",
+    "inner_id": 25,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 26,
+    "annotations": [
+      {
+        "id": 27,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 4"
+              ]
+            },
+            "id": "wP2FVPMHMe",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:25:55.820767Z",
+        "updated_at": "2023-06-19T12:25:55.820802Z",
+        "lead_time": 183.862,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "8deaced8-970e-4aef-ac59-333ee453395d",
+        "last_action": null,
+        "task": 26,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "LOFAR Science Processing",
+      "tagline": "Providing a service to generate science-ready LOFAR data, enabling discoveries in astronomy to happen faster and more easily.",
+      "description": "The service allows users to request processing for generating and making available science-ready data, first from LOFAR observational data but to be extended to other existing and future radio astronomical instruments. \n\nThese advanced data products are more easily accessible and usable for cross-domain science and will serve a much wider community than is currently served by the LOFAR Observatory. This is expected to lead to an increased science output.\n\nThe service is built on EGI-ACE HTC compute infrastructure, an advanced data product repository and open source pipelines.",
+      "scientific_domains": "Physical Sciences",
+      "categories": "Image\/Data Analysis",
+      "set1": {
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "SPACE-ML CAESAR service": "SPACE-ML CAESAR, an automated tool for source finding and characterization in astrophysical maps",
+        "SAPS: Surface Energy Balance Automated Processing Service": "Evapotranspiration computations made easy",
+        "VAMDC Query Store": "Quickly cite your data in scientific papers",
+        "Occurrences DataCube Builder ": "Build your datacubes based on occurrences.",
+        "openRDM EU": "openRDM.eu will provide a complete solution to managing your research data, from the bench till the publication, all across Europe."
+      },
+      "set2": {
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "SPACE-ML CAESAR service": "SPACE-ML CAESAR, an automated tool for source finding and characterization in astrophysical maps",
+        "VAMDC Query Store": "Quickly cite your data in scientific papers",
+        "Occurrences DataCube Builder ": "Build your datacubes based on occurrences.",
+        "openRDM EU": "openRDM.eu will provide a complete solution to managing your research data, from the bench till the publication, all across Europe.",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser."
+      },
+      "set3": {
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "SIMBAD": " The SIMBAD astronomical database provides basic data, cross-identifications, bibliography and measurements for astronomical objects outside the solar system.",
+        "VAMDC Query Store": "Quickly cite your data in scientific papers",
+        "Occurrences DataCube Builder ": "Build your datacubes based on occurrences.",
+        "openRDM EU": "openRDM.eu will provide a complete solution to managing your research data, from the bench till the publication, all across Europe.",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser."
+      },
+      "set4": {
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "SPACE-ML CAESAR service": "SPACE-ML CAESAR, an automated tool for source finding and characterization in astrophysical maps",
+        "AI4GEO Engine": "Collaborative Virtual Research Environment dedicated to Earth Observation and geolocated data",
+        "SPACE-VIS ViaLactea Service": "SPACE-VIS ViaLactea Service for Galactic Plane data access and visualization under FAIR principles",
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "Open Knowledge Maps": "A visual interface to the world's scientific knowledge"
+      },
+      "set5": {
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "AI4GEO Engine": "Collaborative Virtual Research Environment dedicated to Earth Observation and geolocated data",
+        "SPACE-VIS ViaLactea Service": "SPACE-VIS ViaLactea Service for Galactic Plane data access and visualization under FAIR principles",
+        "Open Knowledge Maps": "A visual interface to the world's scientific knowledge",
+        "SAPS: Surface Energy Balance Automated Processing Service": "Evapotranspiration computations made easy",
+        "SIMBAD": " The SIMBAD astronomical database provides basic data, cross-identifications, bibliography and measurements for astronomical objects outside the solar system."
+      },
+      "shuffled_diversities": [
+        50,
+        75,
+        100,
+        0,
+        25
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507820Z",
+    "updated_at": "2023-06-19T12:25:55.840160Z",
+    "inner_id": 26,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 27,
+    "annotations": [
+      {
+        "id": 28,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 2"
+              ]
+            },
+            "id": "Ljsr9tVQIj",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:28:45.026535Z",
+        "updated_at": "2023-06-19T12:28:45.026553Z",
+        "lead_time": 169.028,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "6eee2712-7317-494e-8a10-1e47bf7520ff",
+        "last_action": null,
+        "task": 27,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Virtual Imaging Platform",
+      "tagline": "Medical simulation and image data analysis as a service",
+      "description": "The Virtual Imaging Platform (VIP) is a web portal for medical simulation and image data analysis. It leverages resources available in the biomed Virtual Organisation of the EGI e-Infrastructure to offer an open service to academic researchers worldwide.",
+      "scientific_domains": "Health Sciences",
+      "categories": "Image\/Data Analysis, Workflows",
+      "set1": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "Multi-Messenger Online Data Analysis (MMODA)": "Multi-Messenger Astrophysical Online Data Analysis",
+        "ISIS Data Analysis as a Service": "remote data analysis service",
+        "Marine Environmental Indicators VLab": "Easy access to Marine Environment Indicators",
+        "AI4GEO Engine": "Collaborative Virtual Research Environment dedicated to Earth Observation and geolocated data",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project"
+      },
+      "set2": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "Marine Environmental Indicators VLab": "Easy access to Marine Environment Indicators",
+        "GPU Grant Program for scientific research projects and prospective startups": "GPU servers GRANT PROGRAM",
+        "DEEP training facility": "Distributed training facility for Machine Learning, Artificial Intelligence and Deep Learning models.",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "UMSA - Untargeted Mass Spectrometry data Analysis": "Reproducible environment for processing untargeted mass spectrometry data"
+      },
+      "set3": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "Marine Environmental Indicators VLab": "Easy access to Marine Environment Indicators",
+        "DEEP training facility": "Distributed training facility for Machine Learning, Artificial Intelligence and Deep Learning models.",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "UMSA - Untargeted Mass Spectrometry data Analysis": "Reproducible environment for processing untargeted mass spectrometry data",
+        "ScipionCloud": "The whole power of Scipion running on EOSC compute resources to be used from a browser."
+      },
+      "set4": {
+        "DESY VISA Portal": "Virtual Machines for Scientific Analysis",
+        "ISIS Data Analysis as a Service": "remote data analysis service",
+        "Marine Environmental Indicators VLab": "Easy access to Marine Environment Indicators",
+        "AI4GEO Engine": "Collaborative Virtual Research Environment dedicated to Earth Observation and geolocated data",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "Data Service Portal Aila": "Download Data from Aila"
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        75,
+        25
+      ],
+      "duplicate_pairs": [
+        [
+          75,
+          100
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507859Z",
+    "updated_at": "2023-06-19T12:28:45.047410Z",
+    "inner_id": 27,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 28,
+    "annotations": [
+      {
+        "id": 29,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 2"
+              ]
+            },
+            "id": "FfI3vgkpuV",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:31:52.689574Z",
+        "updated_at": "2023-06-19T12:31:52.689592Z",
+        "lead_time": 187.505,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "5bc558a0-3a09-42c6-a51d-79ad25cbe0d2",
+        "last_action": null,
+        "task": 28,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "TagMe",
+      "tagline": "Entity Linking tools",
+      "description": "TAGME is a powerful tool that is able to identify on-the-fly meaningful short-phrases (called \"spots\") in an unstructured text and link them to a pertinent Wikipedia page in a fast and effective way. This annotation process has implications which go far beyond the enrichment of the text with explanatory links because it concerns with the contextualization and, in some way, the understanding of the text.",
+      "scientific_domains": "Other",
+      "categories": "Machine Learning",
+      "set1": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "RPrototypingLab Virtual Research Environment": "Development and integration environment for R.",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Technical support towards OpenAIRE compliance": "OpenAIRE compliance made simple",
+        "Europeana APIs": "Large-Scale Data Discovery, Acquisition and Management of Digital Cultural Heritage in Research",
+        "Entity Matching Tool": "Match textual references for places and EHRI vocabulary items"
+      },
+      "set2": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Europeana APIs": "Large-Scale Data Discovery, Acquisition and Management of Digital Cultural Heritage in Research",
+        "Alien and Invasive Species Virtual Research Environment": "A web-based, collaborative working environment enacting to predict the spread of an invasive species (possibly alien) in a new environment",
+        "de.NBI Cloud: Cloud Computing for Life Sciences": "Compute Power for your Project",
+        "Entity Matching Tool": "Match textual references for places and EHRI vocabulary items",
+        "KER - Keyword Extractor": "A keyword extractor for Czech and English"
+      },
+      "set3": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "RPrototypingLab Virtual Research Environment": "Development and integration environment for R.",
+        "OpenAIRE Mining Service": "Text and data mining for scholarly communication",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Technical support towards OpenAIRE compliance": "OpenAIRE compliance made simple"
+      },
+      "set4": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "RPrototypingLab Virtual Research Environment": "Development and integration environment for R.",
+        "MorphoDiTa": "Morphological Dictionary and Tagger",
+        "Technical support towards OpenAIRE compliance": "OpenAIRE compliance made simple",
+        "Europeana APIs": "Large-Scale Data Discovery, Acquisition and Management of Digital Cultural Heritage in Research"
+      },
+      "set5": {
+        "UDPipe: tool for lemmatization, morphological analysis, POS tagging and dependency parsing in multiple languages": "Basic language analysis toolkit and service for uniform text processing in 100 natural languages.",
+        "Pundit: a semantic powered web annotation service": "A web annotation tool, empowered by semantic technologies, that makes note taking on the web possible and smart",
+        "Enrichment API": "Enhance the metadata from your files or Research Objects with the Enrichment API",
+        "RPrototypingLab Virtual Research Environment": "Development and integration environment for R.",
+        "OpenAIRE Mining Service": "Text and data mining for scholarly communication",
+        "Search API": "Navigate over the collection of enriched ROs from ROHub"
+      },
+      "shuffled_diversities": [
+        75,
+        100,
+        25,
+        50,
+        0
+      ],
+      "duplicate_pairs": [],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        },
+        {
+          "value": "Set 5"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507902Z",
+    "updated_at": "2023-06-19T12:31:52.709216Z",
+    "inner_id": 28,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  },
+  {
+    "id": 29,
+    "annotations": [
+      {
+        "id": 30,
+        "completed_by": 4,
+        "result": [
+          {
+            "value": {
+              "choices": [
+                "Set 1"
+              ]
+            },
+            "id": "AepLeEsSla",
+            "from_name": "set_choice",
+            "to_name": "name",
+            "type": "choices",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2023-06-19T12:35:38.801680Z",
+        "updated_at": "2023-06-19T12:35:38.801704Z",
+        "lead_time": 225.935,
+        "prediction": {},
+        "result_count": 0,
+        "unique_id": "3282c7a2-286c-44b4-9c19-801f9f4ca0c4",
+        "last_action": null,
+        "task": 29,
+        "project": 7,
+        "updated_by": 4,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6a9d356a-Mike.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "name": "Cloudferro Data related Services - EO Finder",
+      "tagline": "Manage your data products",
+      "description": "The Finder tool allows finding data products stored in the repository, obtained or processed at selected times with selected cloud coverage levels and with other selection criteria.",
+      "scientific_domains": "Generic",
+      "categories": "Other",
+      "set1": {
+        "DMPonline": "The leading tool to help you develop Data Management Plans",
+        "CloudFerro Data Collections Catalog": "Data Collections Catalog is based on two solutions – CKAN - comprehensive frontend catalogue application for information discovery and EO Browser – specialized catalogue application for robust satellite imagery discovery and quick georeferenced preview",
+        "Open Telekom Cloud": "Simple, secure and affordable European alternative public cloud, based on OpenStack",
+        "LEMONADE - Live Exploration and Mining Of a Non-trivial Amount of Data from Everywhere": "Visual Data Analytics Tool",
+        "Cloudferro Data related Services - EO browser": "The EO Browser allows visualization and basic processing of selected data collections (like Sentinel-1 L1 GRD or Sentinel-2 L1C)",
+        "ARGOS": "Plan and follow your data"
+      },
+      "set2": {
+        "DMPonline": "The leading tool to help you develop Data Management Plans",
+        "Cloudferro Data related Services - EO browser": "The EO Browser allows visualization and basic processing of selected data collections (like Sentinel-1 L1 GRD or Sentinel-2 L1C)",
+        "ARGOS": "Plan and follow your data",
+        "Jelastic Platform-as-a-Service": "Multi-Cloud DevOps PaaS",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "MOLGENIS": "Molgenis is a flexible interoperability platform for scientific data and it enables quick setup of local and central catalogues making finding, managing and sharing samples and data much easier."
+      },
+      "set3": {
+        "DMPonline": "The leading tool to help you develop Data Management Plans",
+        "NOMAD repository": "The NOMAD Repository is the world's largest collection of computational materials science data.",
+        "SeaDataNet CDI Data Discovery & Access service: OGC WMS service for locations of all data sets (open and restricted) ": "Access oceanographic in-situ data",
+        "Jelastic Platform-as-a-Service": "Multi-Cloud DevOps PaaS",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "MOLGENIS": "Molgenis is a flexible interoperability platform for scientific data and it enables quick setup of local and central catalogues making finding, managing and sharing samples and data much easier."
+      },
+      "set4": {
+        "DMPonline": "The leading tool to help you develop Data Management Plans",
+        "NOMAD repository": "The NOMAD Repository is the world's largest collection of computational materials science data.",
+        "SeaDataNet European Directory of Marine Environmental Data (EDMED)": "Discover oceanographic datasets and data collections",
+        "Jelastic Platform-as-a-Service": "Multi-Cloud DevOps PaaS",
+        "Data Service Portal Aila": "Download Data from Aila",
+        "MOLGENIS": "Molgenis is a flexible interoperability platform for scientific data and it enables quick setup of local and central catalogues making finding, managing and sharing samples and data much easier."
+      },
+      "set5": {
+        "": ""
+      },
+      "shuffled_diversities": [
+        0,
+        50,
+        100,
+        75
+      ],
+      "duplicate_pairs": [
+        [
+          0,
+          25
+        ]
+      ],
+      "variants": [
+        {
+          "value": "Set 1"
+        },
+        {
+          "value": "Set 2"
+        },
+        {
+          "value": "Set 3"
+        },
+        {
+          "value": "Set 4"
+        }
+      ]
+    },
+    "meta": {},
+    "created_at": "2023-06-19T09:57:15.507943Z",
+    "updated_at": "2023-06-19T12:35:38.822126Z",
+    "inner_id": 29,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 7,
+    "updated_by": 4,
+    "comment_authors": []
+  }
+]

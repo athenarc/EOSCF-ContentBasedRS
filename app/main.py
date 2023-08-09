@@ -4,7 +4,7 @@ import sentry_sdk
 import uvicorn
 from app.databases.content_based_rec_db import ContentBasedRecsMongoDB
 from app.scheduler import start_scheduler_process
-from app.settings import APP_SETTINGS
+from app.settings import APP_SETTINGS, settings_validation
 
 logging.basicConfig(level=logging.INFO if APP_SETTINGS['BACKEND']['PROD'] else logging.DEBUG,
                     format='%(levelname)s | %(asctime)s | %(message)s',
@@ -33,6 +33,8 @@ async def startup_event():
 
 
 def start_app():
+    settings_validation()
+
     # The update scheduler starts before uvicorn creates many workers
     # The following call will also create necessary structures if they do not exist in redis
     start_scheduler_process()

@@ -4,64 +4,84 @@
 
 ## Introduction
 
-- Purpose of the document and intended audience.
-- Overview of the maintenance procedures covered in the documentation.
+The purpose of the document is to provide a set of guidelines and best practices for maintaining the software.
 
-## Maintenance Overview
+It covers:
 
-- Explanation of the importance of regular maintenance.
-- High-level view of the maintenance tasks described.
+* Regular maintenance tasks
+* Upgrades and updates
+* Data management
+* Troubleshooting
+* Health checks
 
 ## Regular Maintenance Tasks
 
-- List of routine tasks required to keep the software/application healthy.
-- Frequency and scheduling recommendations.
+Regular maintenance tasks include:
+
+* Checking that the software is healthy (covered in [Health Checks](#health-checks))
+* Checking that the service is up and running in the front-end (when viewing a service in the marketplace)
+* Checking if any package vulnerabilities have been reported and doing the necessary updates (covered in [Upgrades and Updates](#upgrades-and-updates))
+* Checking Sentry and resolving any issues
+* Update the models if the schema of the Catalog API responses changes (covered in [Data Management](#data-management))
+
+The frequency of these tasks depends on the criticality of the issue.
 
 ## Upgrades and Updates
 
-- Procedures for updating the software to new versions.
-- Guidelines for handling major and minor upgrades.
+Upgrading and updating the software is done through **GitHub releases**.
 
-## Patch Management
+Releases can be separated into 3 categories:
 
-- Process for applying security patches and updates.
-- Steps to ensure the software is up-to-date.
+* Major releases (i.e. 1.4.2 -> 2.0.0)
+* Minor releases (i.e. 1.4.2 -> 1.5.0)
+* Patch releases (i.e. 1.4.2 -> 1.4.3)
 
-## Backup and Restore
+### Major Releases
 
-- Detailed backup procedures for data and configurations.
-- Steps for restoring from backups in case of failure.
+Major releases describe a significant change in the software (i.e. a completely new feature). A breaking change (i.e. a change in the API) is also considered a major release.
+
+In the case of a breaking change it must be explicitly written in the:
+
+* release notes
+* the README.md file
+
+and also communicated to the users of the software (the marketplace team).
+
+### Minor Releases
+
+Minor releases describe a change in the software that does not break the API. These releases can include:
+
+* New features
+* Bug fixes
+* Performance improvements
+* Security patches
+* Documentation updates
+
+### Patches
+
+Patches are small changes that fix bugs or security issues that is important to be quickly resolved. They do not include any new features or breaking changes.
+
+Patches should be modular meaning that they cover a specific issue and do not include any other changes.
 
 ## Data Management
 
-- Guidelines for managing and maintaining databases or data repositories.
-- How to handle data migration and data retention.
+Concerning persistence the software uses:
 
-## Performance Tuning
-
-- Tips and techniques for optimizing system performance.
-- Monitoring and adjusting system resources.
+* The RS Mongo (external), which is used as a read-only database for getting service info. In case the schema of the services collection changes we must update the models.
+* The Internal Mongo (internal), which is used to store recommendation history. Changing the schema will result in breaking the provider-insights app.
+* Redis (internal), which is used to store internal structures like the text embeddings and tag corpus. The application can automatically recover in case of Redis reinitialization.
 
 ## Troubleshooting
 
-- Common maintenance issues and troubleshooting steps.
-- How to diagnose and resolve problems.
+The most common issues can be resolved by calling the `update` API call. This call will update the internal structures of the model (embeddings, similarities) and will resolve most issues.
 
 ## Health Checks
 
-- Regular health checks and monitoring procedures.
-- How to identify potential issues before they become critical.
+The health checks are performed by the `health` API call. The call checks the following:
 
-## Disaster Recovery
+* the app is up and running
+* we have access to the RS Mongo
+* we have access to the internal Mongo
+* the Redis connection is up and running
 
-- Detailed steps for recovering from major failures or disasters.
-- Ensuring business continuity during recovery.
-
-## Documentation and Training
-
-- How to keep maintenance documentation up to date.
-- Training resources for maintenance personnel.
-
-## References
-
-- Links to external resources, documentation, articles related to maintenance practices.
+Concerning monitoring (cronitor) and error tracking (sentry) check `monitoring-logging.md`.

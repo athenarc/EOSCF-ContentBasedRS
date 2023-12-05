@@ -83,7 +83,7 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
         return RecommendationSet(
             panel_id="similar_services",
             recommendations=[service['service_id'] for service in most_similar_services],
-            score=[service['score'] for service in most_similar_services],
+            scores=[service['score'] for service in most_similar_services],
             explanations=[STATIC_EXPLANATION for _ in most_similar_services],
             explanations_short=[STATIC_SHORT_EXPLANATION for _ in most_similar_services],
             engine_version=APP_SETTINGS["BACKEND"]["VERSION_NAME"]

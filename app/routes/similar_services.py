@@ -24,7 +24,7 @@ class RecommendationSet(BaseModel):
     recommendations: List[int]
     explanations: List[str]
     explanations_short: List[str]
-    score: List[float]
+    scores: List[float]
     engine_version: str
 
 

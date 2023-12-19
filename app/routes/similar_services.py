@@ -1,5 +1,7 @@
 import logging
 from typing import Any, List
+from datetime import datetime
+
 
 from app.exceptions import IdNotExists
 from app.recommenders.similar_services.recommendation_set_generation import \
@@ -31,6 +33,12 @@ class SimilarServicesRecommendationParameters(BaseModel):
     service_id: Any
     num: int = 5
 
+    # The fields below are not used in the recommendation algorithm 
+    # but are used for logging purposes
+    unique_id: str = None
+    aai_uid: str = None
+    timestamp: datetime = None
+
     @validator('user_id')
     def id_is_positive_or_none(cls, v):
         if v is not None and v < 0:
@@ -48,7 +56,10 @@ class SimilarServicesRecommendationParameters(BaseModel):
             "example": {
                 "user_id": 1,
                 "service_id": 62,
-                "num": 5
+                "num": 5,
+                "unique_id": "unique_id",
+                "aai_uid": "aai_uid",
+                "timestamp": "2020-03-04T09:00:00.000Z"
             }
         }
 

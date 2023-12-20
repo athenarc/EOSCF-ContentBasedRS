@@ -49,7 +49,7 @@ def test_rs_registered_user_rs_mongo_response_length(registered_user_rs_mongo):
     assert len(r.json()['recommendations']) == 3
     assert len(r.json()['explanations']) == 3
     assert len(r.json()['explanations_short']) == 3
-    assert len(r.json()['score']) == 3
+    assert len(r.json()['scores']) == 3
 
 
 @pytest.mark.api
@@ -63,7 +63,7 @@ def test_rs_anonymous_user_rs_mongo_response_length(anonymous_user_rs_mongo):
     assert len(r.json()['recommendations']) == 3
     assert len(r.json()['explanations']) == 3
     assert len(r.json()['explanations_short']) == 3
-    assert len(r.json()['score']) == 3
+    assert len(r.json()['scores']) == 3
 
 
 @pytest.mark.api
@@ -96,7 +96,7 @@ def test_rs_registered_user_rs_mongo_check_returned_scores(registered_user_rs_mo
     r = requests.post(url=f"{BASE_URL}/similar_services/recommendation",
                       json=registered_user_rs_mongo['request'])
 
-    assert r.json()['score'] == registered_user_rs_mongo['expected_response']['score']
+    assert r.json()['scores'] == registered_user_rs_mongo['expected_response']['scores']
 
 
 @pytest.mark.api
@@ -107,7 +107,7 @@ def test_rs_anonymous_user_rs_mongo_check_returned_scores(anonymous_user_rs_mong
     r = requests.post(url=f"{BASE_URL}/similar_services/recommendation",
                       json=anonymous_user_rs_mongo['request'])
 
-    assert r.json()['score'] == anonymous_user_rs_mongo['expected_response']['score']
+    assert r.json()['scores'] == anonymous_user_rs_mongo['expected_response']['scores']
 
 
 @pytest.mark.api

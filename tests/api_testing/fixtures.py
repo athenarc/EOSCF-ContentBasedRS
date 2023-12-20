@@ -8,7 +8,10 @@ def registered_user_rs_mongo():
             {
                 "user_id": 1,
                 "service_id": 62,
-                "num": 5
+                "num": 5,
+                "unique_id": "unique_id",
+                "aai_uid": "aai_uid",
+                "timestamp": "2020-03-04T09:00:00.000Z"
             },
         "expected_response":
             {
@@ -34,7 +37,7 @@ def registered_user_rs_mongo():
                     "Similar metadata and text to the service you are viewing",
                     "Similar metadata and text to the service you are viewing"
                 ],
-                "score": [
+                "scores": [
                     0.43541143296862467,
                     0.5265261705092077,
                     0.3967509799607228,
@@ -78,7 +81,7 @@ def anonymous_user_rs_mongo():
                     "Similar metadata and text to the service you are viewing",
                     "Similar metadata and text to the service you are viewing"
                 ],
-                "score": [
+                "scores": [
                     0.5827761193116507,
                     0.5569315553154331,
                     0.4671127696832022,

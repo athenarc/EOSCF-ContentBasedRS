@@ -79,6 +79,9 @@ def get_similar_services_recommendation(recommendation_parameters: SimilarServic
     - **user_id**: the id of the user (as it was given in the marketplace)
     - **service_id**: the id of the service currently viewed by the user
     - **num**: number of recommendations we want returned
+    - **unique_id**: a unique id of the user to differentiate between anonymous users
+    - **aai_uid**: the aai uid of the user
+    - **timestamp**: the timestamp of the recommendation request
 
     **Returns** a list of dicts where service_id is the id of the recommended service and score is the similarity with
     the currently viewed service.

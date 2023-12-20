@@ -20,4 +20,4 @@ The application is built as a microservice with a REST API that is deployed in t
 
 ## API
 
-[Content-Based RS API](https://app.swaggerhub.com/apis-docs/MikeXydas/EOSC-ContentBasedRS/2.1.0)
+[Content-Based RS API](https://app.swaggerhub.com/apis/MikeXydas/EOSC-ContentBasedRS)

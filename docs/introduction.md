@@ -12,7 +12,7 @@ The recommendations take into account:
 - the metadata attributes of the service (i.e. scientific domains, categories)
 - the user history of orders of other services
 
-![Recommendations Examples](assets/similar_services_example.png)
+![assets/similar_services_example.png](assets/similar_services_example.png)
 
 The application is built as a microservice with a REST API that is deployed in the marketplace infrastructure (from Cyfronet).
 

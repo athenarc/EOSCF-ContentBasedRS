@@ -9,7 +9,7 @@ The system consists of 2 main components:
 - **Similar services component**, responsible for calculating the similarity between the onboarding service and the rest of the services in the catalogue.
 - **Similar Services Recommender**, responsible for providing the similar services functionality using the results of the previous component.
 
-![System Architecture](assets/similar_services_architecture.png)
+![assets/similar_services_architecture.png](./assets/similar_services_architecture.png)
 
 Concerning persistence the system uses:
 

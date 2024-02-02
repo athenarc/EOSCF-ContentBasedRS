@@ -13,7 +13,7 @@ def sentence_filtering_from_keywords(sentences):
     keywords = keywords_extraction(' '.join(sentences))
 
     top_n = 4
-    selected_keywords = keywords["keyword"].values.tolist()[:top_n]
+    selected_keywords = keywords["text"].values.tolist()[:top_n]
 
     selected_sentences = [sentence for sentence in sentences
                           if check_keyword_existence(selected_keywords, sentence)]
